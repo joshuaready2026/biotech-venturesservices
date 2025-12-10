@@ -2,142 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>BioTech Ventures | Medical Weight Loss & Wellness</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BioTech Ventures | $100 Per Telehealth Consult</title>
+  <meta name="description" content="1099 telehealth for aesthetics NPs – $100 per consult + $25 renewals. Launching KS • NM • ND • SD."/>
+
+  <!-- Calendly + Stripe -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script src="https://js.stripe.com/v3/buy-button.js"></script>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f6f9fc; color: #222; }
-    header { background: #0f4c81; color: white; padding: 25px; text-align: center; }
-    nav { background: white; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,.1); }
-    nav a { margin: 15px; text-decoration: none; font-weight: bold; color: #0f4c81; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',Arial,sans-serif; line-height:1.6; color:#333; overflow-x:hidden; }
+    a { text-decoration:none; }
 
-    .hero { text-align: center; padding: 60px 20px; background: linear-gradient(to right, #e7f2fb, #ffffff); }
-    .hero h1 { font-size: 42px; }
-    .hero p { font-size: 18px; }
-    .button { background: #0f4c81; color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; display: inline-block; margin-top: 20px; }
+    /* Video Background */
+    #bg-video { position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; z-index:-1; object-fit:cover; }
 
-    .section { padding: 60px 20px; max-width: 1100px; margin: auto; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 25px; }
+    /* Overlay */
+    .overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.45); z-index:-1; }
 
-    .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,.08); text-align: center; }
-    .card img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+    /* Hero */
+    .hero {
+      height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+      text-align:center; color:white; padding:0 20px;
+    }
+    .hero h1 { font-size:3.5rem; margin-bottom:16px; text-shadow:0 3px 10px rgba(0,0,0,0.7); }
+    .hero p { font-size:1.4rem; margin-bottom:30px; max-width:800px; }
+    .btn {
+      background:#00d4ff; color:black; padding:16px 40px; border-radius:50px; font-size:1.3rem; font-weight:bold;
+      box-shadow:0 8px 25px rgba(0,212,255,0.4); transition:0.3s;
+    }
+    .btn:hover { transform:scale(1.05); background:#00ffcc; }
 
-    footer { background: #0f4c81; color: white; text-align: center; padding: 25px; margin-top: 50px; }
+    /* Sections */
+    section { padding:80px 20px; text-align:center; }
+    .light { background:#f8fbfd; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; max-width:1200px; margin:0 auto; }
+    .card {
+      background:white; padding:30px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+    .card:hover { transform:translateY(-10px); }
+    .card h3 { font-size:1.8rem; margin:20px 0 10px; color:#007bff; }
 
-    input, select { width: 100%; padding: 12px; margin: 10px 0; border-radius: 6px; border: 1px solid #ddd; }
-    button { width: 100%; padding: 15px; background: #0f4c81; color: white; font-size: 16px; border: none; border-radius: 6px; }
+    .earnings { font-size:3rem; font-weight:900; color:#00d4ff; margin:10px 0; }
+
+    footer { background:#111; color:#aaa; padding:40px 20px; text-align:center; }
+
+    @media (max-width:768px) {
+      .hero h1 { font-size:2.5rem; }
+      .hero p { font-size:1.1rem; }
+    }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>BioTech Ventures Telehealth</h1>
-  <p>Medical Weight Loss • HRT • ED • Wellness</p>
-</header>
+  <!-- Background Video (free stock – no copyright issues) -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://videos.pexels.com/video-files/854982/854982-hd_1920_1080_30fps.mp4 type="video/mp4">
+  </video>
+  <div class="overlay"></div>
 
-<nav>
-  <a href="#weightloss">Weight Loss</a>
-  <a href="#ed">ED</a>
-  <a href="#hrt">HRT</a>
-  <a href="#how">How It Works</a>
-  <a href="#start">Get Started</a>
-</nav>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Earn $100+ Per 10-Minute Telehealth Consult</h1>
+    <p>1099 opportunity for aesthetics NPs • Keep your current job • We handle pharmacy, marketing, & payments</p>
 
-<section class="hero">
-  <h1>Doctor-Led Weight Loss & Wellness</h1>
-  <p>Safe • Private • Delivered to Your Door</p>
-  <a href="#start" class="button">Get Started Today</a>
-</section>
+    <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-top:30px;">
+      <!-- Calendly Button (Gwen’s calls) -->
+      <a href="" class="btn" 
+         onclick="Calendly.initPopupWidget({url:'https://calendly.com/gwen-biotech/15min'}); return false;">
+        Book 15-Min Call with Gwen
+      </a>
 
-<!-- WEIGHT LOSS -->
-<section class="section" id="weightloss">
-  <h2>Medical Weight Loss Programs</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1571019613914-85f342c55f23" />
-      <h3>Semaglutide</h3>
-      <p>Weekly injection medical weight loss.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1580281657521-6c52b61fda90" />
-      <h3>Tirzepatide</h3>
-      <p>Advanced multi-pathway metabolic support.</p>
+      <!-- Fake Stripe Checkout (Demo Mode) -->
+      <stripe-buy-button
+        buy-button-id="buy_btn_1QXXXXXXXXXXXX"  <!-- ← change this later when you have real Stripe -->
+        publishable-key="pk_test_51234567890abcdefg"   <!-- ← this is public test key – safe to leave -->
+        client-reference-id="demo-np-recruitment"
+      >
+      </stripe-buy-button>
     </div>
   </div>
-</section>
 
-<!-- ED -->
-<section class="section" id="ed">
-  <h2>Men's Performance (ED)</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1550791871-6cae74c7a59d" />
-      <h3>Sildenafil (Generic Viagra)</h3>
-      <p>Improved blood flow & performance.</p>
+  <!-- Services -->
+  <section class="light">
+    <h2 style="font-size:2.8rem; margin-bottom:40px;">Services Your Patients Love</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Medical Weight Loss</h3>
+        <div class="earnings">$100</div>
+        <p>per initial GLP-1 consult<br>+$25 every reorder</p>
+      </div>
+      <div class="card">
+        <h3>Men’s ED & Performance</h3>
+        <div class="earnings">$80–$100</div>
+        <p>Sildenafil, Tadalafil, Trimix</p>
+      </div>
+      <div class="card">
+        <h3>Hormone Optimization (HRT)</h3>
+        <div class="earnings">$100+</div>
+        <p>Testosterone & estrogen therapy</p>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7" />
-      <h3>Tadalafil (Daily ED Support)</h3>
-      <p>All-day lasting support.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- HRT -->
-<section class="section" id="hrt">
-  <h2>Hormone Therapy (HRT)</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600618528240-fb9fc964b853" />
-      <h3>Testosterone Therapy</h3>
-      <p>Restore energy, strength & confidence.</p>
+  <!-- How It Works -->
+  <section>
+    <h2 style="font-size:2.8rem; margin-bottom:50px; color:white; text-shadow:0 3px 10px black;">How It Works – 3 Simple Steps</h2>
+    <div class="grid">
+      <div class="card" style="background:rgba(255,255,255,0.95);">
+        <h3>1. Patient Books Online</h3>
+        <p>Your existing aesthetics clients (or referrals) fill a 2-minute form.</p>
+      </div>
+      <div class="card" style="background:rgba(255,255,255,0.95);">
+        <h3>2. You Do 10-Min Video Call</h3>
+        <p>Prescribe → we send Rx to 503A pharmacy instantly.</p>
+      </div>
+      <div class="card" style="background:rgba(255,255,255,0.95);">
+        <h3>3. Pharmacy Ships Direct</h3>
+        <p>Patient gets meds in 2–3 days. You earn on every refill forever.</p>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464" />
-      <h3>Estrogen Optimization</h3>
-      <p>Balance hormones safely.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- HOW IT WORKS -->
-<section class="section" id="how">
-  <h2>How It Works</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>1. Online Intake</h3>
-      <p>Complete your secure medical form.</p>
+  <!-- Earnings Calculator (Impressive!) -->
+  <section class="light">
+    <h2 style="font-size:2.8rem; margin-bottom:40px;">Your Potential Earnings (Real Numbers)</h2>
+    <div class="grid">
+      <div class="card">
+        <p>10 patients/month from your book</p>
+        <div class="earnings">$1,000–$1,500/mo</div>
+      </div>
+      <div class="card">
+        <p>30 patients + referrals</p>
+        <div class="earnings">$4,000–$7,000/mo</div>
+      </div>
+      <div class="card">
+        <p>50+ patients (top partners)</p>
+        <div class="earnings">$10,000–$20,000+/mo</div>
+      </div>
     </div>
-    <div class="card">
-      <h3>2. NP Review</h3>
-      <p>Licensed Nurse Practitioner evaluates you.</p>
-    </div>
-    <div class="card">
-      <h3>3. Pharmacy Ships</h3>
-      <p>Medication delivered to your door.</p>
-    </div>
-  </div>
-</section>
+    <p style="margin-top:30px; font-size:1.3rem;"><strong>First 5 consults = $100 bonus each</strong> (paid same week)</p>
+  </section>
 
-<!-- START FORM -->
-<section class="section" id="start">
-  <h2>Start Your Visit</h2>
-  <form>
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <input type="tel" placeholder="Phone Number">
-    <select>
-      <option>Weight Loss</option>
-      <option>ED</option>
-      <option>HRT</option>
-    </select>
-    <button type="submit">Begin My Visit</button>
-  </form>
-</section>
+  <!-- Final CTA -->
+  <section style="background:#007bff; color:white; padding:100px 20px;">
+    <h2 style="font-size:3rem;">Spots Filling Fast for December 2025 Launch</h2>
+    <p style="font-size:1.5rem; margin:30px 0;">Kansas • New Mexico • North Dakota • South Dakota</p>
+    <a href="" class="btn" style="background:white; color:#007bff; font-size:1.5rem; padding:20px 50px;"
+       onclick="Calendly.initPopupWidget({url:'https://calendly.com/gwen-biotech/15min'}); return false;">
+      Yes – Book Call with Gwen Now
+    </a>
+  </section>
 
-<footer>
-  <p>© 2025 BioTech Ventures LLC • Cash Pay Telehealth • 503A Pharmacy Partnered</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 BioTech Ventures LLC — Telehealth Facilitation Platform</p>
+    <p>Launching December 2025 in full-practice-authority states with the highest demand and lowest competition.</p>
+  </footer>
 </body>
 </html>
