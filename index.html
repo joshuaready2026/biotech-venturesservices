@@ -4,182 +4,208 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BioTech Ventures | Telehealth + E-Pharmacy</title>
-  <meta name="description" content="Cash-pay telehealth + e-pharmacy. Clean programs. Simple booking. Video visits." />
-  <link rel="preconnect" href="https://source.unsplash.com" />
+  <meta name="description" content="Cash-pay telehealth + e-pharmacy. Book online. Video visits. Clean programs." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <!-- Sticky top bar -->
-  <header class="top">
-    <div class="container top-inner">
-      <div class="brand">
-        <div class="logo">BV</div>
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="BioTech Ventures home">
+        <div class="mark">BV</div>
         <div class="brand-text">
           <div class="brand-name">BioTech Ventures</div>
           <div class="brand-sub">Telehealth + E-Pharmacy</div>
         </div>
-      </div>
+      </a>
 
-      <nav class="nav">
+      <nav class="nav-links" aria-label="Primary">
         <a href="#programs">Programs</a>
-        <a href="#how">How it Works</a>
+        <a href="#how">How it works</a>
         <a href="#booking">Booking</a>
         <a href="#visit">Video Visit</a>
         <a href="#np">For NPs</a>
       </nav>
 
-      <div class="top-cta">
-        <a class="btn btn-ghost" href="#np">NP Demo</a>
-        <a class="btn" href="#booking">Book Now</a>
+      <div class="nav-cta">
+        <a class="btn btn-soft" href="#np">NP Demo</a>
+        <a class="btn" id="navBookBtn" href="#booking">Book</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#programs">Programs</a>
+      <a href="#how">How it works</a>
+      <a href="#booking">Booking</a>
+      <a href="#visit">Video Visit</a>
+      <a href="#np">For NPs</a>
+      <a class="btn mobile-btn" href="#booking">Book</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="pill">Cash-Pay • NP-Led • Fast Onboarding</div>
-        <h1>Clean, modern telehealth — built for speed.</h1>
-        <p class="lead">
-          Patients pay BioTech Ventures. We handle the workflow and support.
-          NPs focus on care. Simple booking + video visits for fast launches in new markets.
-        </p>
+  <!-- HERO -->
+  <main id="top" class="page">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="badge">Cash-pay • NP-led • Built for fast launches</div>
+          <h1>Clean, modern care — built for telehealth.</h1>
+          <p class="subhead">
+            Patients pay BioTech Ventures. We handle the workflow. NPs focus on care.
+            Book online in minutes, meet by video, and get a clear plan.
+          </p>
 
-        <div class="hero-actions">
-          <a class="btn" href="#booking">Book a Visit</a>
-          <a class="btn btn-ghost" href="#programs">View Programs</a>
+          <div class="hero-actions">
+            <a class="btn" id="heroBookBtn" href="#booking">Book a visit</a>
+            <a class="btn btn-soft" href="#programs">View programs</a>
+          </div>
+
+          <div class="pill-row">
+            <div class="pill">
+              <div class="pill-title">Fast onboarding</div>
+              <div class="pill-sub">Intake → booking → visit</div>
+            </div>
+            <div class="pill">
+              <div class="pill-title">Market-ready pricing</div>
+              <div class="pill-sub">Competitive ranges</div>
+            </div>
+            <div class="pill">
+              <div class="pill-title">Demo-ready</div>
+              <div class="pill-sub">Video built in</div>
+            </div>
+          </div>
         </div>
 
-        <div class="trust">
-          <div class="trust-item">
-            <div class="trust-dot"></div>
-            <div>
-              <div class="trust-title">Patient-friendly</div>
-              <div class="trust-sub">Clear steps, simple intake</div>
+        <div class="hero-media">
+          <div class="photo-card">
+            <img
+              alt="Friendly clinician smiling"
+              src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1400&q=80"
+            />
+            <div class="photo-overlay">
+              <div class="overlay-title">NP-led care</div>
+              <div class="overlay-sub">Simple telehealth workflow</div>
             </div>
           </div>
-          <div class="trust-item">
-            <div class="trust-dot"></div>
-            <div>
-              <div class="trust-title">NP-ready</div>
-              <div class="trust-sub">FPA-first workflow</div>
+
+          <div class="mini-grid">
+            <div class="mini">
+              <div class="mini-kicker">Booking</div>
+              <div class="mini-title">Schedule in 60 seconds</div>
             </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-dot"></div>
-            <div>
-              <div class="trust-title">Demo-ready</div>
-              <div class="trust-sub">Booking + video built in</div>
+            <div class="mini">
+              <div class="mini-kicker">Video</div>
+              <div class="mini-title">Join from any device</div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="hero-card">
-        <img class="hero-img" alt="Telehealth clinician" src="https://source.unsplash.com/c1ZGaJTOnJs/1400x900" />
-        <div class="hero-card-inner">
-          <div class="mini">
-            <div class="mini-title">Fast Flow</div>
-            <div class="mini-sub">Intake → Booking → Video Visit → Plan</div>
-          </div>
-          <div class="mini">
-            <div class="mini-title">Out-of-pocket</div>
-            <div class="mini-sub">Transparent ranges (no surprises)</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Programs -->
-  <section id="programs" class="section">
-    <div class="container">
+    <!-- PROGRAMS -->
+    <section id="programs" class="section">
       <div class="section-head">
-        <h2>Programs & Pricing</h2>
-        <p>Clear ranges, competitive starter-market pricing, NP-led care.</p>
+        <h2>Programs & pricing</h2>
+        <p>Clear ranges. Competitive in starter markets. No peptides on this site.</p>
       </div>
 
       <div class="cards">
-        <!-- Weight Loss -->
         <article class="card">
-          <img alt="Clean medication aesthetic" src="https://source.unsplash.com/aLCcungJbrc/1200x800" />
+          <div class="card-img">
+            <img
+              alt="Medication and clean clinical aesthetic"
+              src="https://images.unsplash.com/photo-1580281658628-824ad353bb8f?auto=format&fit=crop&w=1400&q=80"
+            />
+          </div>
           <div class="card-body">
-            <h3>Weight Loss (GLP-1)</h3>
-            <div class="price">
-              <span class="price-strong">$499–$599</span>
+            <div class="card-title">Weight Loss (GLP-1)</div>
+            <div class="price-line">
+              <span class="price">$499–$599</span>
               <span class="price-sub">/ month out-of-pocket</span>
             </div>
-            <p class="muted-sm">
+            <div class="card-desc">
               Based on your clinical plan. Includes provider visits, follow-ups, and refill management.
-            </p>
-            <div class="tag">Most popular option + NP recommendation</div>
+            </div>
+            <div class="chip">Most popular option + NP recommendation</div>
           </div>
         </article>
 
-        <!-- ED -->
         <article class="card">
-          <img alt="Doctor consultation" src="https://source.unsplash.com/aJVTf6LdUj4/1200x800" />
+          <div class="card-img">
+            <img
+              alt="Telehealth consultation"
+              src="https://images.unsplash.com/photo-1584467735871-bf1f4b9ae8c1?auto=format&fit=crop&w=1400&q=80"
+            />
+          </div>
           <div class="card-body">
-            <h3>ED Care</h3>
-            <div class="price">
-              <span class="price-strong">$49</span>
+            <div class="card-title">ED Care</div>
+            <div class="price-line">
+              <span class="price">$49</span>
               <span class="price-sub">to start</span>
             </div>
-            <p class="muted-sm">
+            <div class="card-desc">
               Most plans range <b>$49–$99/month</b> based on medication option and clinical plan.
-            </p>
-            <div class="tag">Fast intake + refills</div>
+            </div>
+            <div class="chip">Fast intake + refills</div>
           </div>
         </article>
 
-        <!-- Men's TRT/HRT -->
         <article class="card">
-          <img alt="Clinical setting" src="https://source.unsplash.com/pyuOXgO951U/1200x800" />
+          <div class="card-img">
+            <img
+              alt="Lab test and clinical workflow"
+              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80"
+            />
+          </div>
           <div class="card-body">
-            <h3>Men’s TRT / HRT</h3>
-            <div class="price">
-              <span class="price-strong">$149</span>
+            <div class="card-title">Men’s TRT / HRT</div>
+            <div class="price-line">
+              <span class="price">$149</span>
               <span class="price-sub">/ month start</span>
             </div>
-            <p class="muted-sm">
+            <div class="card-desc">
               Most plans range <b>$149–$199/month</b> based on labs, medication option, and clinical plan.
-            </p>
-            <div class="tag">Simple monthly care</div>
+            </div>
+            <div class="chip">Simple monthly care</div>
           </div>
         </article>
 
-        <!-- Women's HRT -->
         <article class="card">
-          <img alt="Patient care" src="https://source.unsplash.com/klJoeNisRdI/1200x800" />
+          <div class="card-img">
+            <img
+              alt="Women's health consultation"
+              src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1400&q=80"
+            />
+          </div>
           <div class="card-body">
-            <h3>Women’s HRT</h3>
-            <div class="price">
-              <span class="price-strong">$99</span>
+            <div class="card-title">Women’s HRT</div>
+            <div class="price-line">
+              <span class="price">$99</span>
               <span class="price-sub">/ month start</span>
             </div>
-            <p class="muted-sm">
+            <div class="card-desc">
               Most plans range <b>$99–$149/month</b> based on medication option and clinical plan.
-            </p>
-            <div class="tag">Menopause-focused options</div>
+            </div>
+            <div class="chip">Menopause-focused options</div>
           </div>
         </article>
       </div>
 
-      <div class="notice">
+      <div class="note">
         <b>Note:</b> Final plan and medication options are confirmed after a quick clinical evaluation.
-        For emergencies, call local emergency services.
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- How it works -->
-  <section id="how" class="section section-soft">
-    <div class="container">
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section soft">
       <div class="section-head">
         <h2>How it works</h2>
-        <p>Simple patient experience, clean workflow for NPs.</p>
+        <p>Simple for patients. Clean for NPs.</p>
       </div>
 
       <div class="steps">
@@ -187,21 +213,21 @@
           <div class="step-num">1</div>
           <div>
             <div class="step-title">Quick intake</div>
-            <div class="step-sub">Basic info + goals.</div>
+            <div class="step-sub">Goals + eligibility questions.</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div>
-            <div class="step-title">Book a visit</div>
-            <div class="step-sub">Pick a time instantly.</div>
+            <div class="step-title">Book instantly</div>
+            <div class="step-sub">Pick a time on the calendar.</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div>
             <div class="step-title">Video consult</div>
-            <div class="step-sub">NP confirms plan and next steps.</div>
+            <div class="step-sub">NP confirms plan + next steps.</div>
           </div>
         </div>
         <div class="step">
@@ -212,315 +238,467 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Booking -->
-  <section id="booking" class="section">
-    <div class="container booking-grid">
-      <div>
-        <h2>Book your visit</h2>
-        <p class="muted">
-          For the demo, this button goes to your booking link (Calendly recommended).
-          Replace the URL once you create your scheduling page.
-        </p>
-
-        <div class="booking-actions">
-          <a class="btn" id="bookingLink" href="#" target="_blank" rel="noopener">Open Booking Calendar</a>
-          <a class="btn btn-ghost" href="#visit">Or Start Video Demo</a>
-        </div>
-
-        <form class="form" id="intakeForm">
-          <div class="row">
-            <label>
-              Full name
-              <input required name="name" placeholder="First + Last" />
-            </label>
-            <label>
-              Email
-              <input required type="email" name="email" placeholder="you@email.com" />
-            </label>
-          </div>
-
-          <div class="row">
-            <label>
-              State
-              <select required name="state">
-                <option value="" selected disabled>Select</option>
-                <option>NM</option><option>KS</option><option>IA</option>
-                <option>AZ</option><option>CO</option><option>NV</option><option>TX</option>
-              </select>
-            </label>
-            <label>
-              Program
-              <select required name="program">
-                <option value="" selected disabled>Select</option>
-                <option>Weight Loss (GLP-1)</option>
-                <option>ED Care</option>
-                <option>Men’s TRT / HRT</option>
-                <option>Women’s HRT</option>
-              </select>
-            </label>
-          </div>
-
-          <label>
-            Notes (optional)
-            <textarea name="notes" rows="4" placeholder="Goals, timeline, questions…"></textarea>
-          </label>
-
-          <div class="row row-actions">
-            <button class="btn" type="submit">Save Intake (Demo)</button>
-            <button class="btn btn-ghost" type="button" id="goToBooking">Go to Booking</button>
-          </div>
-
-          <div class="fineprint">
-            Demo site. Not medical advice. If this is an emergency, call local emergency services.
-          </div>
-        </form>
+    <!-- BOOKING -->
+    <section id="booking" class="section">
+      <div class="section-head">
+        <h2>Booking</h2>
+        <p>Use this for your NP demo next week. Replace the link with your real scheduling URL.</p>
       </div>
 
-      <div class="panel">
-        <h3>Demo checklist (NP-ready)</h3>
-        <ul class="checklist">
-          <li>Pricing ranges visible and clean</li>
-          <li>Booking link works</li>
-          <li>Video room starts in 1 click</li>
-          <li>Intake form saves locally for demo</li>
-        </ul>
+      <div class="booking-grid">
+        <div class="panel">
+          <h3>Book your visit</h3>
+          <p class="muted">
+            Click below to open your booking calendar. Intake saves locally for demo.
+          </p>
 
-        <div class="panel-actions">
-          <a class="btn" href="#visit">Open Video Demo</a>
-          <a class="btn btn-ghost" href="#np">NP Pitch</a>
+          <div class="row-actions">
+            <a class="btn" id="bookingLink" href="#" target="_blank" rel="noopener">Open booking calendar</a>
+            <a class="btn btn-soft" href="#visit">Try video demo</a>
+          </div>
+
+          <form class="form" id="intakeForm">
+            <div class="row">
+              <label>
+                Full name
+                <input required name="name" placeholder="First + Last" />
+              </label>
+              <label>
+                Email
+                <input required type="email" name="email" placeholder="you@email.com" />
+              </label>
+            </div>
+
+            <div class="row">
+              <label>
+                State
+                <select required name="state">
+                  <option value="" selected disabled>Select</option>
+                  <option>NM</option><option>KS</option><option>IA</option>
+                  <option>AZ</option><option>CO</option><option>NV</option><option>TX</option>
+                </select>
+              </label>
+              <label>
+                Program
+                <select required name="program">
+                  <option value="" selected disabled>Select</option>
+                  <option>Weight Loss (GLP-1)</option>
+                  <option>ED Care</option>
+                  <option>Men’s TRT / HRT</option>
+                  <option>Women’s HRT</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Notes (optional)
+              <textarea name="notes" rows="4" placeholder="Goals, timeline, questions…"></textarea>
+            </label>
+
+            <div class="row-actions">
+              <button class="btn" type="submit">Save intake (demo)</button>
+              <button class="btn btn-soft" type="button" id="goToBooking">Go to booking</button>
+            </div>
+
+            <div class="fineprint">
+              Demo site. Not medical advice. For emergencies call local emergency services.
+            </div>
+          </form>
+        </div>
+
+        <div class="panel panel-accent">
+          <h3>NP demo flow (60 seconds)</h3>
+          <ol class="list">
+            <li>Show Programs + pricing ranges</li>
+            <li>Click Booking calendar</li>
+            <li>Open Video Visit and join a room</li>
+            <li>Show intake capture (demo)</li>
+          </ol>
+
+          <div class="cta-box">
+            <div class="cta-title">Want a perfect NP demo?</div>
+            <div class="cta-sub">Use a room name like <b>BV-NP-DEMO-(Name)</b>.</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Video Visit -->
-  <section id="visit" class="section section-soft">
-    <div class="container">
+    <!-- VIDEO VISIT -->
+    <section id="visit" class="section soft">
       <div class="section-head">
         <h2>Video Visit (Demo)</h2>
-        <p>Enter a room name and start. (Jitsi embed for easy demos.)</p>
+        <p>Enter a room name → Start/Join. Works on phone, Chromebook, or desktop.</p>
       </div>
 
-      <div class="visit-controls">
-        <input id="roomName" class="input" placeholder="Room name (e.g., BV-NP-Demo-Josh-001)" />
+      <div class="video-controls">
+        <input id="roomName" class="input" placeholder="Room name (e.g., BV-NP-DEMO-Josh-001)" />
         <button class="btn" id="startCall">Start / Join</button>
-        <button class="btn btn-ghost" id="endCall">End</button>
+        <button class="btn btn-soft" id="endCall">End</button>
       </div>
 
-      <div id="jitsiWrap" class="video-wrap">
+      <div id="jitsiWrap" class="video">
         <div class="video-placeholder">
           Enter a room name and click <b>Start / Join</b>.
         </div>
       </div>
+      <div class="fineprint">Demo mode uses Jitsi embed for speed.</div>
+    </section>
 
-      <div class="fineprint">
-        Demo mode: for production, you can upgrade to a dedicated telehealth video vendor if required.
-      </div>
-    </div>
-  </section>
-
-  <!-- NP Section -->
-  <section id="np" class="section">
-    <div class="container">
+    <!-- NPs -->
+    <section id="np" class="section">
       <div class="section-head">
         <h2>For Nurse Practitioners</h2>
-        <p>A clean, scalable model you can run in your market.</p>
+        <p>Clean, scalable model you can run in your market.</p>
       </div>
 
       <div class="np-grid">
-        <div class="np-card">
-          <h3>How the model works</h3>
-          <ul>
+        <div class="panel">
+          <h3>How it works</h3>
+          <ul class="bullets">
             <li>Patients pay BioTech Ventures (cash-pay)</li>
-            <li>We handle workflow + patient support</li>
-            <li>You run evaluation, plan, and follow-ups</li>
-            <li>Medication options follow your clinical judgment + availability</li>
+            <li>We handle ops + patient support</li>
+            <li>You run the evaluation + plan + follow-ups</li>
+            <li>Medication follows your clinical judgment + availability</li>
           </ul>
         </div>
 
-        <div class="np-card">
-          <h3>Demo talking points</h3>
-          <ul>
-            <li>Clean patient experience</li>
-            <li>Fast scheduling + video visit</li>
-            <li>Clear pricing ranges (no confusion)</li>
-            <li>Built for fast launch in new markets</li>
+        <div class="panel">
+          <h3>What you’ll show in the demo</h3>
+          <ul class="bullets">
+            <li>Booking + video are live</li>
+            <li>Pricing ranges are clear</li>
+            <li>Intake is simple</li>
+            <li>Ready for fast market launch</li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand small">
-          <div class="logo">BV</div>
-          <div>
-            <div class="brand-name">BioTech Ventures</div>
-            <div class="brand-sub">Telehealth + E-Pharmacy</div>
+      <div class="footer">
+        <div class="footer-left">
+          <div class="footer-brand">
+            <div class="mark sm">BV</div>
+            <div>
+              <div class="brand-name">BioTech Ventures</div>
+              <div class="brand-sub">Telehealth + E-Pharmacy</div>
+            </div>
           </div>
+          <div class="fineprint">© <span id="year"></span> BioTech Ventures. Demo site.</div>
         </div>
-        <p class="muted">Replace booking and support details before going live.</p>
+
+        <div class="footer-links">
+          <a href="#programs">Programs</a>
+          <a href="#booking">Booking</a>
+          <a href="#visit">Video</a>
+          <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <div class="links">
-        <a href="#booking">Booking</a>
-        <a href="#visit">Video Visit</a>
-        <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
-      </div>
-    </div>
-
-    <div class="container fineprint footer-bottom">
-      © <span id="year"></span> BioTech Ventures. Demo site.
-    </div>
-  </footer>
-
-  <!-- Jitsi IFrame API -->
   <script src="https://meet.jit.si/external_api.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>
 :root{
-  --bg:#071024;
-  --card:rgba(255,255,255,.06);
-  --line:rgba(255,255,255,.10);
-  --text:#e9eefc;
-  --muted:#a9b6d6;
+  --bg:#f7fafc;
+  --card:#ffffff;
+  --text:#0b1220;
+  --muted:#5b6b86;
+  --line:#e6edf7;
+  --brand:#0ea5e9;
+  --brand2:#22c55e;
+  --shadow: 0 12px 30px rgba(16, 24, 40, 0.10);
+  --shadow2: 0 8px 20px rgba(16, 24, 40, 0.08);
+  --radius: 18px;
 }
 
 *{box-sizing:border-box}
-html,body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-body{background:linear-gradient(180deg,#071024 0%, #050a14 100%);color:var(--text)}
-a{color:inherit;text-decoration:none}
-.container{max-width:1120px;margin:0 auto;padding:0 18px}
+html,body{margin:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:var(--text);
+  background:
+    radial-gradient(900px 500px at 20% -10%, rgba(14,165,233,.18), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(34,197,94,.14), transparent 60%),
+    var(--bg);
+}
 
-.top{position:sticky;top:0;background:rgba(7,16,36,.72);backdrop-filter: blur(10px);border-bottom:1px solid var(--line);z-index:50}
-.top-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand.small .logo{width:36px;height:36px}
-.logo{width:42px;height:42px;border-radius:14px;background:rgba(255,255,255,.10);display:grid;place-items:center;font-weight:900}
-.brand-name{font-weight:900;letter-spacing:.2px}
+a{color:inherit;text-decoration:none}
+.page{max-width:1120px;margin:0 auto;padding:0 18px 56px}
+
+/* NAV */
+.nav-wrap{
+  position:sticky; top:0; z-index:50;
+  background:rgba(247,250,252,.82);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1120px; margin:0 auto; padding:12px 18px;
+  display:flex; align-items:center; justify-content:space-between; gap:14px;
+}
+.brand{display:flex; align-items:center; gap:12px}
+.mark{
+  width:44px;height:44px;border-radius:14px;
+  display:grid;place-items:center;
+  font-weight:900;
+  background: linear-gradient(135deg, rgba(14,165,233,.18), rgba(34,197,94,.12));
+  border:1px solid rgba(14,165,233,.20);
+}
+.mark.sm{width:36px;height:36px;border-radius:12px}
+.brand-name{font-weight:900}
 .brand-sub{font-size:12px;color:var(--muted);margin-top:2px}
 
-.nav{display:flex;gap:18px;color:var(--muted);font-size:14px}
-.nav a:hover{color:var(--text)}
-.top-cta{display:flex;gap:10px}
+.nav-links{display:flex;gap:18px;color:var(--muted);font-weight:700}
+.nav-links a{padding:8px 10px;border-radius:12px}
+.nav-links a:hover{background:#eef6ff;color:#0b1220}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.10);color:var(--text);font-weight:800;cursor:pointer}
-.btn:hover{background:rgba(255,255,255,.14)}
-.btn-ghost{background:transparent}
-.btn-ghost:hover{background:rgba(255,255,255,.08)}
-
-.hero{padding:44px 0 18px}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}
-.pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px;background:rgba(255,255,255,.06)}
-h1{font-size:46px;line-height:1.04;margin:14px 0 10px}
-.lead{color:var(--muted);font-size:16px;line-height:1.6;margin:0 0 16px}
-.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 16px}
-.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.trust-item{display:flex;gap:10px;align-items:flex-start;padding:12px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
-.trust-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.6);margin-top:4px}
-.trust-title{font-weight:900;font-size:13px}
-.trust-sub{font-size:12px;color:var(--muted);margin-top:3px}
-
-.hero-card{border:1px solid var(--line);background:var(--card);border-radius:24px;overflow:hidden}
-.hero-img{width:100%;height:320px;object-fit:cover;display:block}
-.hero-card-inner{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px}
-.mini{padding:12px;border-radius:18px;border:1px solid var(--line);background:rgba(0,0,0,.18)}
-.mini-title{font-weight:900}
-.mini-sub{color:var(--muted);font-size:13px;margin-top:4px}
-
-.section{padding:44px 0}
-.section-soft{background:rgba(255,255,255,.03);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:16px}
-.section-head h2{margin:0;font-size:30px}
-.section-head p{margin:0;color:var(--muted);max-width:560px;line-height:1.5}
-
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.card{border:1px solid var(--line);background:var(--card);border-radius:22px;overflow:hidden}
-.card img{width:100%;height:160px;object-fit:cover;display:block}
-.card-body{padding:14px}
-.card h3{margin:0 0 8px;font-size:18px}
-.muted-sm{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.6}
-.tag{margin-top:10px;display:inline-block;padding:7px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(0,0,0,.18);font-size:12px;color:var(--muted)}
-
-.price{display:flex;gap:8px;align-items:baseline}
-.price-strong{font-size:22px;font-weight:1000}
-.price-sub{color:var(--muted);font-weight:800;font-size:12px}
-
-.notice{margin-top:14px;padding:12px 14px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--muted);line-height:1.6}
-
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.step{display:flex;gap:12px;border:1px solid var(--line);background:var(--card);border-radius:20px;padding:14px}
-.step-num{width:34px;height:34px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.10);font-weight:1000}
-.step-title{font-weight:1000}
-.step-sub{color:var(--muted);font-size:13px;margin-top:4px;line-height:1.5}
-
-.booking-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;align-items:start}
-.muted{color:var(--muted);line-height:1.6}
-.booking-actions{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
-
-.form{margin-top:12px;border:1px solid var(--line);background:var(--card);border-radius:22px;padding:14px}
-label{display:block;font-weight:900;font-size:13px;margin:10px 0}
-input,select,textarea{
-  width:100%;
-  margin-top:7px;
-  padding:11px 12px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(0,0,0,.18);
-  color:var(--text);
-  outline:none;
+.nav-cta{display:flex;align-items:center;gap:10px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 14px; border-radius:14px;
+  border:1px solid rgba(14,165,233,.25);
+  background: linear-gradient(180deg, rgba(14,165,233,.18), rgba(14,165,233,.10));
+  font-weight:900; cursor:pointer;
+  box-shadow: var(--shadow2);
 }
-input:focus,select:focus,textarea:focus{border-color:rgba(255,255,255,.28)}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.row-actions{grid-template-columns:1fr 1fr;margin-top:10px}
-.fineprint{margin-top:10px;color:var(--muted);font-size:12px;line-height:1.5}
+.btn:hover{transform: translateY(-1px)}
+.btn-soft{
+  border:1px solid var(--line);
+  background:#ffffff;
+  box-shadow:none;
+}
+.btn-soft:hover{background:#f2f6fb}
 
-.panel{border:1px solid var(--line);background:var(--card);border-radius:22px;padding:16px}
-.panel h3{margin:0 0 10px}
-.checklist{margin:0;padding-left:18px;color:var(--muted);line-height:1.7}
-.panel-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.hamburger{
+  display:none;
+  width:42px;height:42px;border-radius:14px;
+  border:1px solid var(--line);
+  background:#fff; cursor:pointer;
+}
+.hamburger span{
+  display:block; width:18px; height:2px; background:#0b1220;
+  margin:4px auto; border-radius:2px;
+}
+.mobile-menu{
+  max-width:1120px; margin:0 auto;
+  padding:0 18px 12px;
+  display:grid; gap:6px;
+}
+.mobile-menu a{
+  padding:12px 12px; border-radius:14px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--muted); font-weight:800;
+}
+.mobile-menu a:hover{color:var(--text); background:#f2f6fb}
+.mobile-btn{justify-content:center}
 
-.video-wrap{border:1px solid var(--line);background:rgba(0,0,0,.18);border-radius:22px;min-height:520px;overflow:hidden}
-.video-placeholder{padding:18px;color:var(--muted)}
-.visit-controls{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 12px}
-.input{flex:1;min-width:240px}
+/* HERO */
+.hero{padding:28px 0 14px}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:18px; align-items:stretch;
+}
+.badge{
+  display:inline-flex; gap:8px; align-items:center;
+  padding:8px 12px; border-radius:999px;
+  border:1px solid rgba(14,165,233,.18);
+  background: rgba(14,165,233,.10);
+  color:#0b1220; font-weight:900; font-size:12px;
+}
+h1{margin:14px 0 10px; font-size:44px; line-height:1.05}
+.subhead{margin:0; color:var(--muted); font-size:16px; line-height:1.7}
+.hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 14px}
 
-.np-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.np-card{border:1px solid var(--line);background:var(--card);border-radius:22px;padding:16px}
-.np-card h3{margin:0 0 8px}
-.np-card ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.7}
+.pill-row{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:10px}
+.pill{
+  background:#fff; border:1px solid var(--line); border-radius: var(--radius);
+  padding:12px; box-shadow: var(--shadow2);
+}
+.pill-title{font-weight:900}
+.pill-sub{color:var(--muted); font-size:12px; margin-top:4px}
 
-.footer{padding:28px 0;border-top:1px solid var(--line)}
-.footer-grid{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
-.links{display:flex;flex-direction:column;gap:8px;color:var(--muted)}
-.links a:hover{color:var(--text)}
-.footer-bottom{padding-top:12px}
+.hero-media{display:grid; gap:10px}
+.photo-card{
+  background:#fff; border:1px solid var(--line); border-radius: 22px;
+  overflow:hidden; box-shadow: var(--shadow);
+  position:relative;
+}
+.photo-card img{width:100%; height:340px; object-fit:cover; display:block}
+.photo-overlay{
+  position:absolute; left:12px; right:12px; bottom:12px;
+  background: rgba(255,255,255,.92);
+  border:1px solid rgba(230,237,247,.9);
+  border-radius: 18px;
+  padding:10px 12px;
+  box-shadow: var(--shadow2);
+}
+.overlay-title{font-weight:1000}
+.overlay-sub{color:var(--muted); font-size:12px; margin-top:2px}
+
+.mini-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.mini{
+  background:#fff; border:1px solid var(--line); border-radius: 18px;
+  padding:12px; box-shadow: var(--shadow2);
+}
+.mini-kicker{color:var(--muted); font-size:12px; font-weight:900}
+.mini-title{font-weight:900; margin-top:4px}
+
+/* SECTIONS */
+.section{padding:28px 0}
+.section-head{
+  display:flex; align-items:flex-end; justify-content:space-between;
+  gap:12px; margin-bottom:14px;
+}
+.section-head h2{margin:0; font-size:30px}
+.section-head p{margin:0; color:var(--muted); max-width:540px; line-height:1.6}
+.soft{
+  background: rgba(255,255,255,.7);
+  border:1px solid var(--line);
+  border-radius: 26px;
+  padding:22px;
+}
+
+/* CARDS */
+.cards{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+.card{
+  background:#fff; border:1px solid var(--line);
+  border-radius: 22px; overflow:hidden;
+  box-shadow: var(--shadow2);
+}
+.card-img img{width:100%; height:150px; object-fit:cover; display:block}
+.card-body{padding:14px}
+.card-title{font-weight:1000; font-size:16px}
+.price-line{display:flex; gap:8px; align-items:baseline; margin-top:8px}
+.price{font-weight:1000; font-size:22px}
+.price-sub{color:var(--muted); font-weight:900; font-size:12px}
+.card-desc{color:var(--muted); font-size:13px; line-height:1.6; margin-top:8px}
+.chip{
+  display:inline-block; margin-top:10px;
+  padding:7px 10px; border-radius:999px;
+  background:#eef6ff; border:1px solid rgba(14,165,233,.18);
+  color:#0b1220; font-size:12px; font-weight:900;
+}
+.note{
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius: 18px;
+  background:#fff;
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+
+/* STEPS */
+.steps{display:grid; grid-template-columns:repeat(4,1fr); gap:10px}
+.step{
+  background:#fff; border:1px solid var(--line);
+  border-radius: 18px; padding:12px; box-shadow: var(--shadow2);
+  display:flex; gap:10px; align-items:flex-start;
+}
+.step-num{
+  width:34px; height:34px; border-radius:14px;
+  display:grid; place-items:center;
+  background: rgba(14,165,233,.12);
+  border:1px solid rgba(14,165,233,.18);
+  font-weight:1000;
+}
+.step-title{font-weight:1000}
+.step-sub{color:var(--muted); font-size:12px; margin-top:4px; line-height:1.5}
+
+/* BOOKING / FORMS */
+.booking-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:12px}
+.panel{
+  background:#fff; border:1px solid var(--line);
+  border-radius: 22px; padding:16px;
+  box-shadow: var(--shadow2);
+}
+.panel-accent{
+  border:1px solid rgba(34,197,94,.22);
+  background: linear-gradient(180deg, rgba(34,197,94,.08), rgba(255,255,255,1));
+}
+.muted{color:var(--muted); line-height:1.6}
+
+.form{margin-top:12px}
+label{display:block; font-weight:900; font-size:13px; margin:10px 0}
+input,select,textarea{
+  width:100%; margin-top:6px; padding:11px 12px;
+  border-radius: 14px; border:1px solid var(--line);
+  background:#fff; outline:none;
+}
+input:focus,select:focus,textarea:focus{
+  border-color: rgba(14,165,233,.45);
+  box-shadow: 0 0 0 4px rgba(14,165,233,.10);
+}
+.row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.row-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+.fineprint{color:var(--muted); font-size:12px; margin-top:10px; line-height:1.5}
+.list{margin:10px 0 0; color:var(--muted); line-height:1.7}
+.cta-box{
+  margin-top:12px; padding:12px;
+  border-radius: 18px; border:1px solid var(--line);
+  background:#fff;
+}
+.cta-title{font-weight:1000}
+.cta-sub{color:var(--muted); margin-top:3px}
+
+/* VIDEO */
+.video-controls{display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 10px}
+.input{
+  flex:1; min-width:240px;
+  padding:11px 12px; border-radius:14px; border:1px solid var(--line);
+  background:#fff;
+}
+.video{
+  min-height:560px;
+  border-radius: 22px;
+  border:1px solid var(--line);
+  background:#fff;
+  overflow:hidden;
+  box-shadow: var(--shadow2);
+}
+.video-placeholder{padding:16px; color:var(--muted)}
+
+/* NP */
+.np-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.bullets{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.7}
+
+/* FOOTER */
+.footer{
+  margin-top:16px;
+  border-top:1px solid var(--line);
+  padding-top:14px;
+  display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.footer-brand{display:flex; align-items:center; gap:10px}
+.footer-links{display:flex; gap:12px; flex-wrap:wrap; color:var(--muted); font-weight:800}
+.footer-links a:hover{color:var(--text)}
 
 @media (max-width: 980px){
-  .hero-grid,.booking-grid{grid-template-columns:1fr}
+  h1{font-size:36px}
+  .nav-links{display:none}
+  .hamburger{display:inline-flex; align-items:center; justify-content:center}
+  .hero-grid, .booking-grid, .np-grid{grid-template-columns:1fr}
   .cards{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(2,1fr)}
-  h1{font-size:38px}
-  .nav{display:none}
+  .pill-row{grid-template-columns:1fr}
 }
 @media (max-width: 520px){
-  .cards,.steps{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
   .row{grid-template-columns:1fr}
 }
-// ====== CONFIG YOU MUST EDIT ======
-const BOOKING_URL = "https://calendly.com/YOUR-CALENDLY/15min"; // <-- replace with your real link
-// ==================================
+// ====== EDIT THIS ======
+const BOOKING_URL = "https://calendly.com/YOUR-CALENDLY/15min"; // replace with your real booking link
+// =======================
 
+// Set year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Set booking link
+// Wire booking buttons
 const bookingLink = document.getElementById("bookingLink");
 bookingLink.href = BOOKING_URL;
 
@@ -528,23 +706,38 @@ document.getElementById("goToBooking").addEventListener("click", () => {
   window.open(BOOKING_URL, "_blank", "noopener");
 });
 
-// Intake demo behavior (local-only)
+// Mobile menu toggle
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+  const isOpen = hamburger.getAttribute("aria-expanded") === "true";
+  hamburger.setAttribute("aria-expanded", String(!isOpen));
+  mobileMenu.hidden = isOpen;
+});
+
+// Close mobile menu when clicking a link
+mobileMenu.querySelectorAll("a").forEach(a => {
+  a.addEventListener("click", () => {
+    mobileMenu.hidden = true;
+    hamburger.setAttribute("aria-expanded", "false");
+  });
+});
+
+// Intake demo save (local storage)
 const intakeForm = document.getElementById("intakeForm");
 intakeForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(intakeForm).entries());
   localStorage.setItem("bv_intake_demo", JSON.stringify(data));
-  alert("Intake saved (demo). Now click 'Open Booking Calendar'.");
+  alert("Saved (demo). Now click “Open booking calendar”.");
 });
 
-// Jitsi embed (video demo)
+// Video (Jitsi embed)
 let api = null;
 
 function safeRoomName(raw) {
-  return (raw || "")
-    .trim()
-    .replace(/[^a-zA-Z0-9-_]/g, "-")
-    .slice(0, 60) || "BV-NP-Demo";
+  return (raw || "").trim().replace(/[^a-zA-Z0-9-_]/g, "-").slice(0, 60) || "BV-NP-DEMO";
 }
 
 document.getElementById("startCall").addEventListener("click", () => {
@@ -552,16 +745,13 @@ document.getElementById("startCall").addEventListener("click", () => {
   const parentNode = document.getElementById("jitsiWrap");
 
   parentNode.innerHTML = "";
-  if (api) {
-    try { api.dispose(); } catch (_) {}
-    api = null;
-  }
+  if (api) { try { api.dispose(); } catch (_) {} api = null; }
 
   api = new JitsiMeetExternalAPI("meet.jit.si", {
     roomName: room,
     parentNode,
     width: "100%",
-    height: 520,
+    height: 560,
     configOverwrite: { prejoinPageEnabled: true },
     interfaceConfigOverwrite: { DISABLE_JOIN_LEAVE_NOTIFICATIONS: true }
   });
@@ -569,9 +759,8 @@ document.getElementById("startCall").addEventListener("click", () => {
 
 document.getElementById("endCall").addEventListener("click", () => {
   const parentNode = document.getElementById("jitsiWrap");
-  if (api) {
-    try { api.dispose(); } catch (_) {}
-    api = null;
-  }
+  if (api) { try { api.dispose(); } catch (_) {} api = null; }
   parentNode.innerHTML = `<div class="video-placeholder">Call ended.</div>`;
 });
+
+
