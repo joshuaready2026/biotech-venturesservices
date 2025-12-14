@@ -1,442 +1,268 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BioTech Ventures | Telehealth + E-Pharmacy</title>
-  <meta name="description" content="Cash-pay telehealth + e-pharmacy. Book online. Video visits. Clear programs." />
+  <meta name="description" content="Cash-pay telehealth + e-pharmacy. Simple booking. Video visits." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
-
 <body>
-  <!-- Top announcement bar -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span class="dot"></span>
-      <span><b>No insurance required.</b> Cash-pay telehealth + e-pharmacy built for speed.</span>
-      <a class="topbar-link" href="#booking">Get started</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">
+      <div class="mark">BV</div>
+      <div>
+        <div class="brand-name">BioTech Ventures</div>
+        <div class="brand-sub">Telehealth + E-Pharmacy</div>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="#programs">Programs</a>
+      <a href="#how">How it works</a>
+      <a href="#booking">Booking</a>
+      <a href="#np">For NPs</a>
+    </nav>
+
+    <div class="cta">
+      <a class="btn btn-ghost" href="#visit">Video demo</a>
+      <a class="btn" href="#booking">Get started</a>
+      <button class="menu" id="menuBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 
-  <!-- Header / Nav -->
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="BioTech Ventures home">
-        <div class="brand-mark">BV</div>
-        <div class="brand-text">
-          <div class="brand-name">BioTech Ventures</div>
-          <div class="brand-sub">Telehealth + E-Pharmacy</div>
+  <div class="container mobile" id="mobileMenu" hidden>
+    <a href="#programs">Programs</a>
+    <a href="#how">How it works</a>
+    <a href="#booking">Booking</a>
+    <a href="#np">For NPs</a>
+    <a class="btn mobile-btn" href="#booking">Get started</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO (simple) -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="badge">Cash-pay • NP-led • Built for demos</div>
+        <h1>Simple telehealth, built to launch fast.</h1>
+        <p class="lead">
+          Patients pay BioTech Ventures. NPs deliver care. We handle workflow, booking, and support.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#booking">Get started</a>
+          <a class="btn btn-ghost" href="#programs">View programs</a>
         </div>
-      </a>
+      </div>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#programs">Programs</a>
-        <a href="#how">How it works</a>
-        <a href="#faq">FAQ</a>
-        <a href="#np">For NPs</a>
-      </nav>
-
-      <div class="header-cta">
-        <a class="btn btn-ghost" href="#visit">Video demo</a>
-        <a class="btn" href="#booking">Get started</a>
-
-        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+      <div class="hero-image">
+        <img
+          alt="Friendly clinician"
+          src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1600&q=80"
+        />
       </div>
     </div>
+  </section>
 
-    <!-- mobile menu -->
-    <div class="container mobile" id="mobileMenu" hidden>
-      <a href="#programs">Programs</a>
-      <a href="#how">How it works</a>
-      <a href="#faq">FAQ</a>
-      <a href="#np">For NPs</a>
-      <a class="btn mobile-cta" href="#booking">Get started</a>
+  <!-- PROGRAMS (simple row) -->
+  <section id="programs" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Programs & pricing</h2>
+        <p>Clean ranges for your demo (no peptides on this site).</p>
+      </div>
+
+      <div class="programs">
+        <div class="program">
+          <div class="program-title">Weight Loss (GLP-1)</div>
+          <div class="program-price">$499–$599 / month</div>
+          <div class="program-sub">Out-of-pocket. Based on your clinical plan.</div>
+        </div>
+
+        <div class="program">
+          <div class="program-title">ED Care</div>
+          <div class="program-price">$49 to start</div>
+          <div class="program-sub">Most plans $49–$99/month.</div>
+        </div>
+
+        <div class="program">
+          <div class="program-title">Men’s TRT / HRT</div>
+          <div class="program-price">$149/month start</div>
+          <div class="program-sub">Most plans $149–$199/month.</div>
+        </div>
+
+        <div class="program">
+          <div class="program-title">Women’s HRT</div>
+          <div class="program-price">$99/month start</div>
+          <div class="program-sub">Most plans $99–$149/month.</div>
+        </div>
+      </div>
+
+      <div class="note">
+        <b>Note:</b> Final plan and medication options are confirmed after a quick clinical evaluation.
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-left">
-          <div class="kicker">Your health, simplified.</div>
-          <h1>Affordable, personalized care from the comfort of your home.</h1>
-          <p class="lead">
-            Patients pay BioTech Ventures. We handle workflow + support.
-            Your NP runs the evaluation, follow-ups, and plan.
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p>Three simple steps.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <div class="step-title">Complete intake</div>
+            <div class="step-sub">Share goals + basic details.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <div class="step-title">Book online</div>
+            <div class="step-sub">Pick a time instantly.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <div class="step-title">Video visit + plan</div>
+            <div class="step-sub">NP confirms plan + follow-ups.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Booking</h2>
+        <p>Replace the booking link and you’re demo-ready.</p>
+      </div>
+
+      <div class="booking">
+        <div class="panel">
+          <h3>Quick intake (demo)</h3>
+          <form id="intakeForm" class="form">
+            <label>Full name
+              <input name="name" required placeholder="First + Last">
+            </label>
+            <label>Email
+              <input name="email" required type="email" placeholder="you@email.com">
+            </label>
+            <label>State
+              <select name="state" required>
+                <option value="" selected disabled>Select</option>
+                <option>NM</option><option>KS</option><option>IA</option>
+                <option>AZ</option><option>CO</option><option>NV</option><option>TX</option>
+              </select>
+            </label>
+            <label>Program
+              <select name="program" required>
+                <option value="" selected disabled>Select</option>
+                <option>Weight Loss (GLP-1)</option>
+                <option>ED Care</option>
+                <option>Men’s TRT / HRT</option>
+                <option>Women’s HRT</option>
+              </select>
+            </label>
+            <label>Notes (optional)
+              <textarea name="notes" rows="3" placeholder="Goals, questions…"></textarea>
+            </label>
+
+            <div class="actions">
+              <button class="btn" type="submit">Save intake</button>
+              <button class="btn btn-ghost" type="button" id="goToBooking">Open booking</button>
+            </div>
+
+            <div class="fineprint">
+              Demo site. Not medical advice. If this is an emergency, call local emergency services.
+            </div>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h3>Next step</h3>
+          <p class="muted">
+            Click to open your scheduling page (Calendly recommended).
           </p>
+          <a class="btn" id="bookingLink" href="#" target="_blank" rel="noopener">Open booking calendar</a>
 
-          <div class="hero-actions">
-            <a class="btn" href="#booking">Get started</a>
-            <a class="btn btn-ghost" href="#programs">View programs</a>
-          </div>
+          <div class="divider"></div>
 
-          <div class="trust">
-            <div class="trust-item">
-              <div class="icon">✓</div>
-              <div>
-                <div class="trust-title">No waiting rooms</div>
-                <div class="trust-sub">Book online in minutes</div>
-              </div>
-            </div>
-            <div class="trust-item">
-              <div class="icon">✓</div>
-              <div>
-                <div class="trust-title">Video visits</div>
-                <div class="trust-sub">Join from any device</div>
-              </div>
-            </div>
-            <div class="trust-item">
-              <div class="icon">✓</div>
-              <div>
-                <div class="trust-title">Clear pricing</div>
-                <div class="trust-sub">Competitive ranges</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="hero-card">
-            <img
-              alt="Woman on laptop speaking with clinician"
-              src="https://images.unsplash.com/photo-1580281658628-824ad353bb8f?auto=format&fit=crop&w=1600&q=80"
-            />
-            <div class="hero-card-body">
-              <div class="hero-card-title">Easy as 1-2-3</div>
-              <div class="hero-card-steps">
-                <div class="chip"><b>1</b> Intake form</div>
-                <div class="chip"><b>2</b> Video visit</div>
-                <div class="chip"><b>3</b> Plan + refills</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mini-row">
-            <div class="mini">
-              <div class="mini-kicker">Demo-ready</div>
-              <div class="mini-title">Booking + video built in</div>
-            </div>
-            <div class="mini">
-              <div class="mini-kicker">Starter markets</div>
-              <div class="mini-title">NM • KS • IA ready</div>
-            </div>
-          </div>
+          <p class="muted">Or show the video visit flow:</p>
+          <a class="btn btn-ghost" href="#visit">Open video demo</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Programs -->
-    <section id="programs" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Programs</h2>
-          <p>Clean, simple offerings for your demo (no peptides on this website).</p>
-        </div>
-
-        <div class="grid cards">
-          <article class="card">
-            <div class="card-img">
-              <img alt="Medication vial" src="https://images.unsplash.com/photo-1582719478185-2bb3c4298aab?auto=format&fit=crop&w=1600&q=80" />
-            </div>
-            <div class="card-body">
-              <h3>Weight Loss (GLP-1)</h3>
-              <div class="price">
-                <span class="price-strong">$499–$599</span>
-                <span class="price-sub">/ month out-of-pocket</span>
-              </div>
-              <p>
-                Based on your clinical plan. Includes provider visits, follow-ups, and refill management.
-              </p>
-              <div class="pill">Most popular option + NP recommendation</div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img alt="Telehealth consultation" src="https://images.unsplash.com/photo-1584467735871-bf1f4b9ae8c1?auto=format&fit=crop&w=1600&q=80" />
-            </div>
-            <div class="card-body">
-              <h3>ED Care</h3>
-              <div class="price">
-                <span class="price-strong">$49</span>
-                <span class="price-sub">to start</span>
-              </div>
-              <p>
-                Most plans range <b>$49–$99/month</b> based on medication option and clinical plan.
-              </p>
-              <div class="pill">Fast intake + refills</div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img alt="Lab testing" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80" />
-            </div>
-            <div class="card-body">
-              <h3>Men’s TRT / HRT</h3>
-              <div class="price">
-                <span class="price-strong">$149</span>
-                <span class="price-sub">/ month start</span>
-              </div>
-              <p>
-                Most plans range <b>$149–$199/month</b> based on labs, medication option, and clinical plan.
-              </p>
-              <div class="pill">Simple monthly care</div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img alt="Women's health consultation" src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1600&q=80" />
-            </div>
-            <div class="card-body">
-              <h3>Women’s HRT</h3>
-              <div class="price">
-                <span class="price-strong">$99</span>
-                <span class="price-sub">/ month start</span>
-              </div>
-              <p>
-                Most plans range <b>$99–$149/month</b> based on medication option and clinical plan.
-              </p>
-              <div class="pill">Menopause-focused options</div>
-            </div>
-          </article>
-        </div>
-
-        <div class="note">
-          <b>Note:</b> Final plan and medication options are confirmed after a quick clinical evaluation.
-        </div>
+  <!-- VIDEO -->
+  <section id="visit" class="section soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Video visit (demo)</h2>
+        <p>Enter a room name and join.</p>
       </div>
-    </section>
 
-    <!-- How it works -->
-    <section id="how" class="section section-soft">
-      <div class="container">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p>Exactly what you want to show NPs: simple patient path.</p>
-        </div>
-
-        <div class="grid how">
-          <div class="how-step">
-            <div class="how-num">1</div>
-            <div>
-              <div class="how-title">Medical forms</div>
-              <div class="how-sub">Share details — takes about 5 minutes.</div>
-            </div>
-          </div>
-
-          <div class="how-step">
-            <div class="how-num">2</div>
-            <div>
-              <div class="how-title">Meet with an NP</div>
-              <div class="how-sub">Video visit to confirm eligibility + plan.</div>
-            </div>
-          </div>
-
-          <div class="how-step">
-            <div class="how-num">3</div>
-            <div>
-              <div class="how-title">Ongoing care</div>
-              <div class="how-sub">Follow-ups + refill management each month.</div>
-            </div>
-          </div>
-        </div>
+      <div class="video-controls">
+        <input id="roomName" class="input" placeholder="BV-NP-DEMO-Josh-001">
+        <button class="btn" id="startCall">Start / Join</button>
+        <button class="btn btn-ghost" id="endCall">End</button>
       </div>
-    </section>
 
-    <!-- Booking -->
-    <section id="booking" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Get started</h2>
-          <p>For your demo: intake + booking + video. Replace links before going live.</p>
-        </div>
-
-        <div class="grid booking">
-          <div class="panel">
-            <h3>Quick intake (demo)</h3>
-            <p class="muted">This saves locally in your browser so you can show the workflow.</p>
-
-            <form id="intakeForm" class="form">
-              <div class="grid two">
-                <label>
-                  Full name
-                  <input name="name" required placeholder="First + Last" />
-                </label>
-                <label>
-                  Email
-                  <input name="email" required type="email" placeholder="you@email.com" />
-                </label>
-              </div>
-
-              <div class="grid two">
-                <label>
-                  State
-                  <select name="state" required>
-                    <option value="" selected disabled>Select</option>
-                    <option>NM</option><option>KS</option><option>IA</option>
-                    <option>AZ</option><option>CO</option><option>NV</option><option>TX</option>
-                  </select>
-                </label>
-
-                <label>
-                  Program
-                  <select name="program" required>
-                    <option value="" selected disabled>Select</option>
-                    <option>Weight Loss (GLP-1)</option>
-                    <option>ED Care</option>
-                    <option>Men’s TRT / HRT</option>
-                    <option>Women’s HRT</option>
-                  </select>
-                </label>
-              </div>
-
-              <label>
-                Notes (optional)
-                <textarea name="notes" rows="4" placeholder="Goals, timeline, questions…"></textarea>
-              </label>
-
-              <div class="actions">
-                <button class="btn" type="submit">Save intake (demo)</button>
-                <button class="btn btn-ghost" type="button" id="goToBooking">Open booking</button>
-              </div>
-
-              <div class="fineprint">
-                Demo site. Not medical advice. If this is an emergency, call local emergency services.
-              </div>
-            </form>
-          </div>
-
-          <div class="panel panel-accent">
-            <h3>Booking + payments</h3>
-            <p class="muted">
-              Replace these links with your real tools. For a demo, links are enough.
-            </p>
-
-            <div class="stack">
-              <a class="btn" id="bookingLink" href="#" target="_blank" rel="noopener">Open booking calendar</a>
-              <a class="btn btn-ghost" href="#visit">Start video demo</a>
-              <a class="btn btn-ghost" id="stripeLink" href="#" target="_blank" rel="noopener">Stripe dashboard (placeholder)</a>
-            </div>
-
-            <div class="note small">
-              For real payments, Stripe Checkout needs a small backend (you can add later).
-            </div>
-          </div>
-        </div>
+      <div id="jitsiWrap" class="video">
+        <div class="video-placeholder">Enter a room name and click <b>Start / Join</b>.</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Video demo -->
-    <section id="visit" class="section section-soft">
-      <div class="container">
-        <div class="section-head">
-          <h2>Video visit (demo)</h2>
-          <p>Enter a room name → Start/Join (works great for NP demos).</p>
-        </div>
-
-        <div class="video-controls">
-          <input id="roomName" class="input" placeholder="Room name (e.g., BV-NP-DEMO-Josh-001)" />
-          <button class="btn" id="startCall">Start / Join</button>
-          <button class="btn btn-ghost" id="endCall">End</button>
-        </div>
-
-        <div id="jitsiWrap" class="video">
-          <div class="video-placeholder">
-            Enter a room name and click <b>Start / Join</b>.
-          </div>
-        </div>
-
-        <div class="fineprint">Demo uses Jitsi embed for speed.</div>
+  <!-- NPs -->
+  <section id="np" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>For Nurse Practitioners</h2>
+        <p>One-minute pitch.</p>
       </div>
-    </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>FAQ</h2>
-          <p>Quick answers for prospects and NPs.</p>
-        </div>
-
-        <div class="faq">
-          <details>
-            <summary>How do I see a provider?</summary>
-            <div class="faq-body">Complete intake → book a visit → meet by video with an NP.</div>
-          </details>
-          <details>
-            <summary>Do you accept insurance?</summary>
-            <div class="faq-body">No. This is a cash-pay program designed for speed and simplicity.</div>
-          </details>
-          <details>
-            <summary>What does “$499–$599/month” mean?</summary>
-            <div class="faq-body">Your final monthly price depends on your clinical plan and medication option.</div>
-          </details>
-        </div>
+      <div class="panel">
+        <ul class="bullets">
+          <li>Patients pay BioTech Ventures (cash-pay).</li>
+          <li>We handle booking + workflow + support.</li>
+          <li>You run evaluation, plan, and follow-ups.</li>
+          <li>Medication follows your clinical judgment + availability.</li>
+        </ul>
       </div>
-    </section>
 
-    <!-- For NPs -->
-    <section id="np" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>For Nurse Practitioners</h2>
-          <p>Clean operating model you can show on a single page.</p>
-        </div>
-
-        <div class="grid np">
-          <div class="panel">
-            <h3>How it works</h3>
-            <ul class="bullets">
-              <li>Patients pay BioTech Ventures (cash-pay).</li>
-              <li>We handle workflow + patient support.</li>
-              <li>You run evaluation, plan, and follow-ups.</li>
-              <li>Medication follows your clinical judgment + availability.</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h3>Demo script (30 seconds)</h3>
-            <ol class="bullets">
-              <li>Show Programs + ranges</li>
-              <li>Show intake + booking</li>
-              <li>Start a video room</li>
-              <li>Explain “BV collects, BV pays NP + 503A”</li>
-            </ol>
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div class="muted">© <span id="year"></span> BioTech Ventures — demo site.</div>
+          <div class="footer-links">
+            <a href="#programs">Programs</a>
+            <a href="#booking">Booking</a>
+            <a href="#visit">Video</a>
           </div>
         </div>
+      </footer>
+    </div>
+  </section>
+</main>
 
-        <footer class="footer">
-          <div class="container footer-inner">
-            <div class="foot-left">
-              <div class="brand mini">
-                <div class="brand-mark">BV</div>
-                <div>
-                  <div class="brand-name">BioTech Ventures</div>
-                  <div class="brand-sub">Telehealth + E-Pharmacy</div>
-                </div>
-              </div>
-              <div class="fineprint">© <span id="year"></span> BioTech Ventures — demo site.</div>
-            </div>
-
-            <div class="foot-links">
-              <a href="#programs">Programs</a>
-              <a href="#booking">Booking</a>
-              <a href="#visit">Video</a>
-              <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </section>
-  </main>
-
-  <script src="https://meet.jit.si/external_api.js"></script>
-  <script src="./app.js"></script>
+<script src="https://meet.jit.si/external_api.js"></script>
+<script src="./app.js"></script>
 </body>
 </html>
 
