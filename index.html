@@ -3,33 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BioTech Ventures | Telehealth + E-Pharmacy</title>
-  <meta name="description" content="Cash-pay telehealth + e-pharmacy. Simple booking. Video visits." />
+  <title>BioTech Ventures | Telehealth</title>
+  <meta name="description" content="Simple, affordable telehealth. Book online. Meet by video. Ongoing care." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HERO: PROGRAM FEATURES FIRST -->
+  <section class="hero hero-simple">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <div class="badge">Cash-pay • Simple • Fast</div>
-        <h1>Telehealth made simple.</h1>
+        <h1>Simple, affordable telehealth — built for ongoing care.</h1>
         <p class="lead">
-          Book online, meet by video, and get an ongoing plan — all from home.
-          No insurance required.
+          Out-of-pocket programs designed for convenience, consistency, and results.
         </p>
+
         <div class="hero-actions">
           <a class="btn" href="#booking">Get started</a>
-          <a class="btn btn-ghost" href="#programs">See pricing</a>
+          <a class="btn btn-ghost" href="#programs">View programs</a>
+        </div>
+
+        <!-- FEATURE HIGHLIGHTS -->
+        <div class="feature-grid">
+          <div class="feature">
+            <div class="feature-title">Monthly care</div>
+            <div class="feature-sub">Ongoing check-ins and refill management.</div>
+          </div>
+          <div class="feature">
+            <div class="feature-title">Virtual visits</div>
+            <div class="feature-sub">Meet by secure video from anywhere.</div>
+          </div>
+          <div class="feature">
+            <div class="feature-title">Fast onboarding</div>
+            <div class="feature-sub">Intake → booking → visit.</div>
+          </div>
+          <div class="feature">
+            <div class="feature-title">Clear pricing</div>
+            <div class="feature-sub">No insurance. No hidden fees.</div>
+          </div>
         </div>
       </div>
 
       <div class="hero-image">
         <img
-          alt="Friendly clinician"
+          alt="Telehealth consultation"
           src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1600&q=80"
         />
       </div>
@@ -41,47 +60,87 @@
     <div class="container">
       <div class="section-head">
         <h2>Programs & pricing</h2>
-        <p>Out-of-pocket pricing. Final plan confirmed after a quick clinical evaluation.</p>
+        <p>Out-of-pocket care with simple monthly options.</p>
       </div>
 
-      <div class="programs">
-        <div class="program">
-          <div class="program-title">Weight Loss (GLP-1)</div>
-          <div class="program-price">$499–$599 / month</div>
-          <div class="program-sub">Based on your clinical plan and medication option.</div>
+      <div class="program-cards">
+        <div class="p-card">
+          <div class="p-top">
+            <div>
+              <div class="p-title">Weight Loss</div>
+              <div class="p-price">$499–$599 / month</div>
+            </div>
+            <div class="p-tag">Most popular</div>
+          </div>
+          <div class="p-sub">Price depends on your personalized plan.</div>
+          <ul class="p-features">
+            <li>Initial evaluation and follow-ups</li>
+            <li>Monthly plan adjustments</li>
+            <li>Refill management</li>
+          </ul>
         </div>
 
-        <div class="program">
-          <div class="program-title">ED Care</div>
-          <div class="program-price">$49 to start</div>
-          <div class="program-sub">Most plans range $49–$99/month.</div>
+        <div class="p-card">
+          <div class="p-top">
+            <div>
+              <div class="p-title">ED Care</div>
+              <div class="p-price">$49 to start</div>
+            </div>
+            <div class="p-tag">Fast</div>
+          </div>
+          <div class="p-sub">Most plans range $49–$99/month.</div>
+          <ul class="p-features">
+            <li>Quick intake</li>
+            <li>Ongoing support</li>
+            <li>Simple monthly refills</li>
+          </ul>
         </div>
 
-        <div class="program">
-          <div class="program-title">Men’s TRT / HRT</div>
-          <div class="program-price">$149/month start</div>
-          <div class="program-sub">Most plans range $149–$199/month.</div>
+        <div class="p-card">
+          <div class="p-top">
+            <div>
+              <div class="p-title">Men’s TRT / HRT</div>
+              <div class="p-price">$149/month start</div>
+            </div>
+            <div class="p-tag">Ongoing</div>
+          </div>
+          <div class="p-sub">Most plans range $149–$199/month.</div>
+          <ul class="p-features">
+            <li>Ongoing hormone management</li>
+            <li>Plan adjustments as needed</li>
+            <li>Monthly refill support</li>
+          </ul>
         </div>
 
-        <div class="program">
-          <div class="program-title">Women’s HRT</div>
-          <div class="program-price">$99/month start</div>
-          <div class="program-sub">Most plans range $99–$149/month.</div>
+        <div class="p-card">
+          <div class="p-top">
+            <div>
+              <div class="p-title">Women’s HRT</div>
+              <div class="p-price">$99/month start</div>
+            </div>
+            <div class="p-tag">Support</div>
+          </div>
+          <div class="p-sub">Most plans range $99–$149/month.</div>
+          <ul class="p-features">
+            <li>Menopause-focused care</li>
+            <li>Ongoing symptom check-ins</li>
+            <li>Monthly refills</li>
+          </ul>
         </div>
       </div>
 
       <div class="note">
-        <b>Note:</b> Final plan and medication options are confirmed after a quick clinical evaluation.
+        <b>Note:</b> Final plans are confirmed after a short online evaluation.
       </div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="section soft">
+  <section id="how" class="section soft">
     <div class="container">
       <div class="section-head">
         <h2>How it works</h2>
-        <p>Three simple steps.</p>
+        <p>Three easy steps.</p>
       </div>
 
       <div class="steps">
@@ -89,23 +148,23 @@
           <div class="num">1</div>
           <div>
             <div class="step-title">Complete intake</div>
-            <div class="step-sub">Share your goals and basic info.</div>
+            <div class="step-sub">Tell us about your goals.</div>
           </div>
         </div>
 
         <div class="step">
           <div class="num">2</div>
           <div>
-            <div class="step-title">Book online</div>
-            <div class="step-sub">Choose a time that works for you.</div>
+            <div class="step-title">Book your visit</div>
+            <div class="step-sub">Choose a convenient time.</div>
           </div>
         </div>
 
         <div class="step">
           <div class="num">3</div>
           <div>
-            <div class="step-title">Video visit + plan</div>
-            <div class="step-sub">Meet virtually and start care.</div>
+            <div class="step-title">Meet by video</div>
+            <div class="step-sub">Start your personalized plan.</div>
           </div>
         </div>
       </div>
@@ -122,7 +181,7 @@
 
       <div class="booking">
         <div class="panel">
-          <h3>Quick intake (demo)</h3>
+          <h3>Quick intake</h3>
 
           <form id="intakeForm" class="form">
             <label>Full name
@@ -144,7 +203,7 @@
             <label>Program
               <select name="program" required>
                 <option value="" selected disabled>Select</option>
-                <option>Weight Loss (GLP-1)</option>
+                <option>Weight Loss</option>
                 <option>ED Care</option>
                 <option>Men’s TRT / HRT</option>
                 <option>Women’s HRT</option>
@@ -167,25 +226,22 @@
         </div>
 
         <div class="panel">
-          <h3>Book your visit</h3>
-          <p class="muted">Choose a time on the scheduling page.</p>
-          <a class="btn" id="bookingLink" href="#" target="_blank" rel="noopener">Open booking calendar</a>
-
-          <div class="divider"></div>
-
-          <p class="muted">Want to see the video visit experience?</p>
-          <a class="btn btn-ghost" href="#visit">Open video demo</a>
+          <h3>Next step</h3>
+          <p class="muted">Schedule your visit online.</p>
+          <a class="btn" id="bookingLink" href="#" target="_blank" rel="noopener">
+            Open booking calendar
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VIDEO (optional) -->
+  <!-- VIDEO -->
   <section id="visit" class="section soft">
     <div class="container">
       <div class="section-head">
-        <h2>Video visit (demo)</h2>
-        <p>Enter a room name and join.</p>
+        <h2>Video visit</h2>
+        <p>Secure virtual visit.</p>
       </div>
 
       <div class="video-controls">
@@ -195,14 +251,31 @@
       </div>
 
       <div id="jitsiWrap" class="video">
-        <div class="video-placeholder">Enter a room name and click <b>Start / Join</b>.</div>
+        <div class="video-placeholder">
+          Enter a room name and click <b>Start / Join</b>.
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="muted">© <span id="year"></span> BioTech Ventures — demo site</div>
+  <!-- FOOTER -->
+  <footer class="bottom-info">
+    <div class="container bottom-inner">
+      <div class="bottom-brand">
+        <div class="mark mark-sm">BV</div>
+        <div>
+          <div class="brand-name">BioTech Ventures</div>
+          <div class="brand-sub">Telehealth demo</div>
+        </div>
+      </div>
+
+      <div class="bottom-text">
+        Out-of-pocket telehealth programs delivered virtually for convenience and ongoing care.
+      </div>
+
+      <div class="bottom-fine">
+        © <span id="year"></span> BioTech Ventures
+      </div>
     </div>
   </footer>
 
