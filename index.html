@@ -3,225 +3,103 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BioTech Ventures | Telehealth + E-Pharmacy</title>
-  <meta name="description" content="Cash-pay telehealth + e-pharmacy. Simple booking. Video visits." />
+  <title>BioTech Ventures | Telehealth</title>
+  <meta name="description" content="Cash-pay telehealth. Book online. Video visits." />
   <link rel="stylesheet" href="./styles.css" />
+  <style>
+    /* one-screen layout overrides using your same design system */
+    body{min-height:100vh;display:flex;align-items:center}
+    main{width:100%}
+    .onescreen{
+      padding:26px 0;
+    }
+    .panel-tight{
+      max-width:980px;margin:0 auto;
+      background:#fff;border:1px solid var(--line);border-radius:22px;
+      box-shadow:var(--shadow);padding:18px;
+      display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:center;
+    }
+    .hero-mini h1{font-size:42px;margin:0 0 10px;line-height:1.05}
+    .hero-mini p{margin:0;color:var(--muted);line-height:1.7}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .chip{
+      padding:10px 12px;border-radius:999px;
+      border:1px solid var(--line);background:#fff;
+      font-weight:1000;color:var(--text);font-size:12px;
+    }
+    .rightbox{
+      background:#f7fbff;border:1px solid rgba(10,132,255,.18);
+      border-radius:18px;padding:14px;
+    }
+    .rightbox h3{margin:0 0 8px}
+    .rightbox .muted{margin:0}
+    .right-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .hero-photo{
+      margin-top:12px;border-radius:18px;overflow:hidden;border:1px solid var(--line)
+    }
+    .hero-photo img{width:100%;height:190px;object-fit:cover;display:block}
+    @media (max-width: 980px){
+      body{align-items:flex-start}
+      .panel-tight{grid-template-columns:1fr}
+      .hero-mini h1{font-size:34px}
+      .hero-photo img{height:220px}
+    }
+  </style>
 </head>
 <body>
 
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <div class="badge">Cash-pay • NP-led • Simple & fast</div>
-        <h1>Simple telehealth, built to launch fast.</h1>
-        <p class="lead">
-          Affordable, out-of-pocket care delivered virtually.
-          Book online, meet by video, and get an ongoing plan — all from home.
+<main class="onescreen">
+  <div class="container">
+    <div class="panel-tight">
+      <div class="hero-mini">
+        <div class="badge">Cash-pay • Simple • Fast</div>
+        <h1>Telehealth made simple.</h1>
+        <p>
+          Out-of-pocket programs with online booking and video visits.
+          Final plan confirmed after a quick clinical evaluation.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn" href="#booking">Get started</a>
-          <a class="btn btn-ghost" href="#programs">View programs</a>
+        <div class="chips" aria-label="Pricing summary">
+          <div class="chip">Weight Loss: <b>$499–$599/mo</b></div>
+          <div class="chip">ED: <b>$49</b> to start</div>
+          <div class="chip">Men’s TRT/HRT: <b>$149–$199/mo</b></div>
+          <div class="chip">Women’s HRT: <b>$99–$149/mo</b></div>
+        </div>
+
+        <div class="hero-photo">
+          <img alt="Telehealth clinician" src="https://images.unsplash.com/photo-1584467735871-bf1f4b9ae8c1?auto=format&fit=crop&w=1600&q=80">
         </div>
       </div>
 
-      <div class="hero-image">
-        <img
-          alt="Friendly clinician"
-          src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1600&q=80"
-        />
-      </div>
-    </div>
-  </section>
+      <div class="rightbox">
+        <h3>Get started</h3>
+        <p class="muted">Click below to open the booking calendar.</p>
 
-  <!-- PROGRAMS -->
-  <section id="programs" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Programs & pricing</h2>
-        <p>Clear, competitive pricing. No insurance required.</p>
-      </div>
+        <div class="right-actions">
+          <a class="btn" id="bookingLink" href="#" target="_blank" rel="noopener">Open booking</a>
+          <a class="btn btn-ghost" href="#video" id="videoJump">Video demo</a>
+        </div>
 
-      <div class="programs">
-        <div class="program">
-          <div class="program-title">Weight Loss (GLP-1)</div>
-          <div class="program-price">$499–$599 / month</div>
-          <div class="program-sub">
-            Out-of-pocket. Based on your clinical plan and medication option.
+        <div class="divider"></div>
+
+        <div id="video">
+          <p class="muted" style="margin:0 0 10px;">Video demo (optional)</p>
+          <div class="video-controls">
+            <input id="roomName" class="input" placeholder="BV-DEMO-001">
+            <button class="btn" id="startCall">Join</button>
+            <button class="btn btn-ghost" id="endCall">End</button>
+          </div>
+          <div id="jitsiWrap" class="video" style="min-height:420px;">
+            <div class="video-placeholder">Enter a room name and click <b>Join</b>.</div>
           </div>
         </div>
 
-        <div class="program">
-          <div class="program-title">ED Care</div>
-          <div class="program-price">$49 to start</div>
-          <div class="program-sub">
-            Most plans range $49–$99/month.
-          </div>
-        </div>
-
-        <div class="program">
-          <div class="program-title">Men’s TRT / HRT</div>
-          <div class="program-price">$149/month start</div>
-          <div class="program-sub">
-            Most plans range $149–$199/month.
-          </div>
-        </div>
-
-        <div class="program">
-          <div class="program-title">Women’s HRT</div>
-          <div class="program-price">$99/month start</div>
-          <div class="program-sub">
-            Most plans range $99–$149/month.
-          </div>
-        </div>
-      </div>
-
-      <div class="note">
-        <b>Note:</b> Final plan and medication options are confirmed after a quick clinical evaluation.
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section id="how" class="section soft">
-    <div class="container">
-      <div class="section-head">
-        <h2>How it works</h2>
-        <p>Three simple steps.</p>
-      </div>
-
-      <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <div>
-            <div class="step-title">Complete intake</div>
-            <div class="step-sub">Share your goals and basic info.</div>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="num">2</div>
-          <div>
-            <div class="step-title">Book online</div>
-            <div class="step-sub">Choose a time that works for you.</div>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="num">3</div>
-          <div>
-            <div class="step-title">Video visit + plan</div>
-            <div class="step-sub">Meet with a provider and start care.</div>
-          </div>
+        <div class="fineprint" style="margin-top:10px;">
+          Demo site. Not medical advice. For emergencies call local emergency services.
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- BOOKING -->
-  <section id="booking" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Get started</h2>
-        <p>Quick intake and easy booking.</p>
-      </div>
-
-      <div class="booking">
-        <div class="panel">
-          <h3>Quick intake (demo)</h3>
-
-          <form id="intakeForm" class="form">
-            <label>Full name
-              <input name="name" required placeholder="First + Last">
-            </label>
-
-            <label>Email
-              <input name="email" required type="email" placeholder="you@email.com">
-            </label>
-
-            <label>State
-              <select name="state" required>
-                <option value="" selected disabled>Select</option>
-                <option>NM</option><option>KS</option><option>IA</option>
-                <option>AZ</option><option>CO</option><option>NV</option><option>TX</option>
-              </select>
-            </label>
-
-            <label>Program
-              <select name="program" required>
-                <option value="" selected disabled>Select</option>
-                <option>Weight Loss (GLP-1)</option>
-                <option>ED Care</option>
-                <option>Men’s TRT / HRT</option>
-                <option>Women’s HRT</option>
-              </select>
-            </label>
-
-            <label>Notes (optional)
-              <textarea name="notes" rows="3" placeholder="Goals or questions…"></textarea>
-            </label>
-
-            <div class="actions">
-              <button class="btn" type="submit">Save intake</button>
-              <button class="btn btn-ghost" type="button" id="goToBooking">Open booking</button>
-            </div>
-
-            <div class="fineprint">
-              Demo site. Not medical advice. For emergencies, call local emergency services.
-            </div>
-          </form>
-        </div>
-
-        <div class="panel">
-          <h3>Next step</h3>
-          <p class="muted">Schedule your visit online.</p>
-          <a class="btn" id="bookingLink" href="#" target="_blank" rel="noopener">
-            Open booking calendar
-          </a>
-
-          <div class="divider"></div>
-
-          <p class="muted">Or preview the video visit experience:</p>
-          <a class="btn btn-ghost" href="#visit">Open video demo</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIDEO -->
-  <section id="visit" class="section soft">
-    <div class="container">
-      <div class="section-head">
-        <h2>Video visit (demo)</h2>
-        <p>Enter a room name and join.</p>
-      </div>
-
-      <div class="video-controls">
-        <input id="roomName" class="input" placeholder="BV-DEMO-001">
-        <button class="btn" id="startCall">Start / Join</button>
-        <button class="btn btn-ghost" id="endCall">End</button>
-      </div>
-
-      <div id="jitsiWrap" class="video">
-        <div class="video-placeholder">
-          Enter a room name and click <b>Start / Join</b>.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="muted">
-        © <span id="year"></span> BioTech Ventures — demo site
-      </div>
-    </div>
-  </footer>
-
+  </div>
 </main>
 
 <script src="https://meet.jit.si/external_api.js"></script>
