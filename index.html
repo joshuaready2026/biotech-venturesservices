@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BioTech Ventures | Telehealth</title>
   <meta name="description" content="Affordable, personalized care from home. No insurance required." />
-  <link rel="stylesheet" href="./styles.css?v=8" />
+  <link rel="stylesheet" href="./styles.css?v=5" />
 </head>
 <body>
 
-  <!-- Announcement bar -->
-  <div class="announce">
+  <!-- Announcement bar (more medical + professional) -->
+  <div class="announce" role="banner" aria-label="Announcement">
     <div class="wrap announce-inner">
-      <span class="announce-dot"></span>
-      <span class="announce-text"><b>No insurance required.</b> Affordable, out-of-pocket telehealth.</span>
+      <span class="announce-dot" aria-hidden="true"></span>
+      <span class="announce-text">
+        <b>Cash-pay telehealth.</b> Simple monthly programs • Secure video visits • No insurance required.
+      </span>
       <a class="announce-cta" href="#booking">Get Started</a>
     </div>
   </div>
@@ -24,10 +26,10 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <div class="hero-kicker">No Insurance, No Waiting Rooms</div>
+          <div class="hero-kicker">Modern Telehealth • Clear Monthly Programs</div>
           <h1>Your Health, Simplified.</h1>
           <p class="hero-sub">
-            Affordable, personalized care from the comfort of your home.
+            Out-of-pocket care designed for convenience, privacy, and consistency.
             Book online, meet by video, and follow a simple monthly care plan.
           </p>
 
@@ -36,21 +38,13 @@
             <a class="btn btn-ghost" href="#how">How it works</a>
           </div>
 
-          <!-- category pills -->
-          <div class="cats" aria-label="Programs">
-            <button class="cat active" data-cat="weight">Weight Management</button>
-            <button class="cat" data-cat="whrt">Women’s HRT</button>
-            <button class="cat" data-cat="trt">Testosterone</button>
-            <button class="cat" data-cat="ed">Erectile Dysfunction</button>
-          </div>
-
-          <!-- mini highlight box -->
+          <!-- Removed pills per your request -->
           <div class="hero-mini" id="heroMini">
-            <div class="mini-title">Weight Management</div>
+            <div class="mini-title">What you get</div>
             <div class="mini-points">
-              <div class="mini-point">• Monthly care plan + check-ins</div>
-              <div class="mini-point">• Video visits from home</div>
-              <div class="mini-point">• Out-of-pocket: <b>$499–$599/month</b></div>
+              <div class="mini-point">• Simple monthly plan structure</div>
+              <div class="mini-point">• Secure video visits from home</div>
+              <div class="mini-point">• Easy online booking + support</div>
             </div>
           </div>
         </div>
@@ -59,7 +53,7 @@
           <div class="hero-img">
             <img
               alt="Telehealth video visit"
-              src="https://images.pexels.com/photos/7195123/pexels-photo-7195123.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              src="https://images.pexels.com/photos/7195123/pexels-photo-7195123.jpeg?cs=srgb&dl=pexels-karola-g-7195123.jpg&fm=jpg&w=1600&h=1100"
               loading="eager"
               referrerpolicy="no-referrer"
             />
@@ -72,12 +66,12 @@
     <section class="offer">
       <div class="wrap offer-inner">
         <div class="offer-tag">Get Started</div>
-        <div class="offer-title">Simple monthly programs designed for consistency.</div>
+        <div class="offer-title">Professional, patient-first telehealth — built for monthly success.</div>
         <a class="btn btn-primary btn-sm" href="#programs">View Programs</a>
       </div>
     </section>
 
-    <!-- EASY AS 1-2-3 -->
+    <!-- Easy as 1-2-3 -->
     <section class="easy">
       <div class="wrap">
         <h2 class="h2">Easy as 1-2-3</h2>
@@ -86,42 +80,42 @@
             <div class="easy-img">
               <img
                 alt="Complete intake form"
-                src="https://images.pexels.com/photos/7446988/pexels-photo-7446988.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                src="https://images.pexels.com/photos/7446988/pexels-photo-7446988.jpeg?cs=srgb&dl=pexels-gustavo-fring-7446988.jpg&fm=jpg&w=1400&h=900"
                 loading="lazy"
                 referrerpolicy="no-referrer"
               />
             </div>
-            <div class="easy-text">Complete your intake in minutes</div>
+            <div class="easy-text">Complete intake in minutes</div>
           </div>
 
           <div class="easy-card">
             <div class="easy-img">
               <img
-                alt="Online visit"
-                src="https://images.pexels.com/photos/7659862/pexels-photo-7659862.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                alt="Telehealth visit"
+                src="https://images.pexels.com/photos/7659862/pexels-photo-7659862.jpeg?cs=srgb&dl=pexels-thirdman-7659862.jpg&fm=jpg&w=1400&h=900"
                 loading="lazy"
                 referrerpolicy="no-referrer"
               />
             </div>
-            <div class="easy-text">Meet by secure video from home</div>
+            <div class="easy-text">Meet by secure video</div>
           </div>
 
           <div class="easy-card">
             <div class="easy-img">
               <img
                 alt="Personalized plan"
-                src="https://images.pexels.com/photos/31406894/pexels-photo-31406894.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                src="https://images.pexels.com/photos/31406894/pexels-photo-31406894.jpeg?cs=srgb&dl=pexels-deise-elen-2149983761-31406894.jpg&fm=jpg&w=1400&h=900"
                 loading="lazy"
                 referrerpolicy="no-referrer"
               />
             </div>
-            <div class="easy-text">Start a personalized monthly plan</div>
+            <div class="easy-text">Start a monthly care plan</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROGRAMS -->
+    <!-- Programs -->
     <section id="programs" class="section">
       <div class="wrap">
         <div class="section-head">
@@ -197,78 +191,7 @@
       </div>
     </section>
 
-    <!-- ===== WEIGHT LOSS OFFERINGS (Henry-style) ===== -->
-    <section class="section" id="weight-loss">
-      <div class="wrap">
-
-        <div class="weight-hero">
-          <h2>Your Path to Healthy Weight Starts Here</h2>
-          <p>Provider-supervised medicine with 1-on-1 regular video telehealth visits and ongoing support.</p>
-
-          <div class="weight-badges">
-            <div class="w-badge">Provider Supervised Medicine</div>
-            <div class="w-badge">1-On-1 Regular Video Telehealth Visits</div>
-            <div class="w-badge">Highly Rated by our Patients</div>
-          </div>
-        </div>
-
-        <div class="weight-grid">
-
-          <div class="weight-card">
-            <img src="https://images.pexels.com/photos/5723889/pexels-photo-5723889.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Vial of injectable semaglutide" loading="lazy" referrerpolicy="no-referrer">
-            <h3>Compounded Injectable Semaglutide</h3>
-            <div class="weight-sub">Weekly Injection</div>
-            <ul><li>Vial of injectable semaglutide</li></ul>
-          </div>
-
-          <div class="weight-card">
-            <img src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Bottle with oral semaglutide tablets" loading="lazy" referrerpolicy="no-referrer">
-            <h3>Compounded Oral Semaglutide</h3>
-            <div class="weight-sub">Dissolvable Tablets or Drops</div>
-            <ul><li>Bottle with oral semaglutide tablets / drops</li></ul>
-          </div>
-
-          <div class="weight-card">
-            <img src="https://images.pexels.com/photos/5723886/pexels-photo-5723886.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Vial of injectable microdose semaglutide" loading="lazy" referrerpolicy="no-referrer">
-            <h3>Compounded Microdose Semaglutide</h3>
-            <div class="weight-sub">Injection</div>
-            <ul><li>Vial of injectable semaglutide</li></ul>
-          </div>
-
-          <div class="weight-card">
-            <img src="https://images.pexels.com/photos/3683076/pexels-photo-3683076.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Bottle with dissolving tablets" loading="lazy" referrerpolicy="no-referrer">
-            <h3>Compounded Microdose Oral Semaglutide</h3>
-            <div class="weight-sub">Dissolving Tablets</div>
-            <ul><li>Bottle with oral semaglutide tablets</li></ul>
-          </div>
-
-          <div class="weight-card">
-            <img src="https://images.pexels.com/photos/3683078/pexels-photo-3683078.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Bottle with oral tirzepatide tablets" loading="lazy" referrerpolicy="no-referrer">
-            <h3>Compounded Oral Tirzepatide</h3>
-            <div class="weight-sub">Dissolvable Tablets</div>
-            <ul><li>Bottle with oral tirzepatide tablets</li></ul>
-          </div>
-
-          <div class="weight-card">
-            <img src="https://images.pexels.com/photos/5723893/pexels-photo-5723893.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Vial of injectable liraglutide" loading="lazy" referrerpolicy="no-referrer">
-            <h3>Compounded Injectable Liraglutide</h3>
-            <div class="weight-sub">Daily Injection</div>
-            <ul><li>Vial of injectable liraglutide</li></ul>
-          </div>
-
-          <div class="weight-card">
-            <img src="https://images.pexels.com/photos/3683090/pexels-photo-3683090.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Bottle with oral phentermine tablets" loading="lazy" referrerpolicy="no-referrer">
-            <h3>Compounded Oral Phentermine</h3>
-            <div class="weight-sub">Daily Tablets</div>
-            <ul><li>Oral phentermine tablets</li></ul>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
+    <!-- How it works -->
     <section id="how" class="how">
       <div class="wrap">
         <h2 class="h2">How it works</h2>
@@ -302,7 +225,7 @@
       </div>
     </section>
 
-    <!-- BOOKING -->
+    <!-- Booking -->
     <section id="booking" class="section">
       <div class="wrap">
         <div class="section-head">
@@ -319,7 +242,7 @@
               </label>
 
               <label>Email
-                <input name="email" required type="email" placeholder="you@email.com">
+                <input name="email" required type="email" placeholder="your@email">
               </label>
 
               <label>State
@@ -370,7 +293,7 @@
       </div>
     </section>
 
-    <!-- VIDEO -->
+    <!-- Video -->
     <section id="visit" class="video-section">
       <div class="wrap">
         <h2 class="h2">Video Visit</h2>
@@ -388,7 +311,7 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="wrap footer-inner">
         <div class="footer-left">
@@ -405,6 +328,6 @@
   </main>
 
   <script src="https://meet.jit.si/external_api.js"></script>
-  <script src="./app.js?v=8"></script>
+  <script src="./app.js?v=5"></script>
 </body>
 </html>
