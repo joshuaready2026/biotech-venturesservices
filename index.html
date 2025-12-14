@@ -1,101 +1,410 @@
-<section class="section">
-  <div class="wrap">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BioTech Ventures | Telehealth</title>
+  <meta name="description" content="Affordable, personalized care from home. No insurance required." />
+  <link rel="stylesheet" href="./styles.css?v=8" />
+</head>
+<body>
 
-    <div class="section-head">
-      <h2 class="h2">Your Path to a Healthy Weight Starts Here</h2>
-      <p class="p-muted">
-        Provider-supervised medicine with 1-on-1 video visits and ongoing support.
-      </p>
+  <!-- Announcement bar -->
+  <div class="announce">
+    <div class="wrap announce-inner">
+      <span class="announce-dot"></span>
+      <span class="announce-text"><b>No insurance required.</b> Affordable, out-of-pocket telehealth.</span>
+      <a class="announce-cta" href="#booking">Get Started</a>
     </div>
-
-    <div class="weight-grid">
-
-      <!-- Injectable Semaglutide -->
-      <div class="weight-card">
-        <img src="https://images.pexels.com/photos/5723889/pexels-photo-5723889.jpeg" alt="Injectable vial">
-        <h3>Compounded Injectable Semaglutide</h3>
-        <p class="weight-sub">Weekly Injection</p>
-        <ul>
-          <li>Vial-based injectable medication</li>
-          <li>Provider-supervised plan</li>
-          <li>Designed for consistent weekly use</li>
-        </ul>
-      </div>
-
-      <!-- Oral Semaglutide -->
-      <div class="weight-card">
-        <img src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg" alt="Oral medication bottle">
-        <h3>Compounded Oral Semaglutide</h3>
-        <p class="weight-sub">Dissolving Tablets or Drops</p>
-        <ul>
-          <li>Tablet or liquid oral option</li>
-          <li>No injections required</li>
-          <li>Daily or scheduled dosing</li>
-        </ul>
-      </div>
-
-      <!-- Microdose Injectable -->
-      <div class="weight-card">
-        <img src="https://images.pexels.com/photos/5723886/pexels-photo-5723886.jpeg" alt="Microdose injection vial">
-        <h3>Compounded Microdose Semaglutide</h3>
-        <p class="weight-sub">Injection</p>
-        <ul>
-          <li>Lower-dose injectable option</li>
-          <li>Gradual titration approach</li>
-          <li>Provider-guided dosing</li>
-        </ul>
-      </div>
-
-      <!-- Microdose Oral -->
-      <div class="weight-card">
-        <img src="https://images.pexels.com/photos/3683076/pexels-photo-3683076.jpeg" alt="Oral dissolving tablets">
-        <h3>Compounded Microdose Oral Semaglutide</h3>
-        <p class="weight-sub">Dissolving Tablets</p>
-        <ul>
-          <li>Lower-dose oral formulation</li>
-          <li>Flexible starting option</li>
-          <li>No injections</li>
-        </ul>
-      </div>
-
-      <!-- Oral Tirzepatide -->
-      <div class="weight-card">
-        <img src="https://images.pexels.com/photos/3683078/pexels-photo-3683078.jpeg" alt="Oral medication bottle">
-        <h3>Compounded Oral Tirzepatide</h3>
-        <p class="weight-sub">Dissolving Tablets</p>
-        <ul>
-          <li>Advanced GLP-1 / GIP option</li>
-          <li>Oral dissolving format</li>
-          <li>Provider-directed plan</li>
-        </ul>
-      </div>
-
-      <!-- Injectable Liraglutide -->
-      <div class="weight-card">
-        <img src="https://images.pexels.com/photos/5723893/pexels-photo-5723893.jpeg" alt="Injectable vial">
-        <h3>Compounded Injectable Liraglutide</h3>
-        <p class="weight-sub">Daily Injection</p>
-        <ul>
-          <li>Daily injectable option</li>
-          <li>Established GLP-1 pathway</li>
-          <li>Consistent routine dosing</li>
-        </ul>
-      </div>
-
-      <!-- Oral Phentermine -->
-      <div class="weight-card">
-        <img src="https://images.pexels.com/photos/3683090/pexels-photo-3683090.jpeg" alt="Oral tablets bottle">
-        <h3>Compounded Oral Phentermine</h3>
-        <p class="weight-sub">Daily Tablets</p>
-        <ul>
-          <li>Oral tablet option</li>
-          <li>Daily dosing</li>
-          <li>Provider-evaluated eligibility</li>
-        </ul>
-      </div>
-
-    </div>
-
   </div>
-</section>
 
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker">No Insurance, No Waiting Rooms</div>
+          <h1>Your Health, Simplified.</h1>
+          <p class="hero-sub">
+            Affordable, personalized care from the comfort of your home.
+            Book online, meet by video, and follow a simple monthly care plan.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#booking">Get Started</a>
+            <a class="btn btn-ghost" href="#how">How it works</a>
+          </div>
+
+          <!-- category pills -->
+          <div class="cats" aria-label="Programs">
+            <button class="cat active" data-cat="weight">Weight Management</button>
+            <button class="cat" data-cat="whrt">Women’s HRT</button>
+            <button class="cat" data-cat="trt">Testosterone</button>
+            <button class="cat" data-cat="ed">Erectile Dysfunction</button>
+          </div>
+
+          <!-- mini highlight box -->
+          <div class="hero-mini" id="heroMini">
+            <div class="mini-title">Weight Management</div>
+            <div class="mini-points">
+              <div class="mini-point">• Monthly care plan + check-ins</div>
+              <div class="mini-point">• Video visits from home</div>
+              <div class="mini-point">• Out-of-pocket: <b>$499–$599/month</b></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-img">
+            <img
+              alt="Telehealth video visit"
+              src="https://images.pexels.com/photos/7195123/pexels-photo-7195123.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              loading="eager"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offer strip -->
+    <section class="offer">
+      <div class="wrap offer-inner">
+        <div class="offer-tag">Get Started</div>
+        <div class="offer-title">Simple monthly programs designed for consistency.</div>
+        <a class="btn btn-primary btn-sm" href="#programs">View Programs</a>
+      </div>
+    </section>
+
+    <!-- EASY AS 1-2-3 -->
+    <section class="easy">
+      <div class="wrap">
+        <h2 class="h2">Easy as 1-2-3</h2>
+        <div class="easy-grid">
+          <div class="easy-card">
+            <div class="easy-img">
+              <img
+                alt="Complete intake form"
+                src="https://images.pexels.com/photos/7446988/pexels-photo-7446988.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="easy-text">Complete your intake in minutes</div>
+          </div>
+
+          <div class="easy-card">
+            <div class="easy-img">
+              <img
+                alt="Online visit"
+                src="https://images.pexels.com/photos/7659862/pexels-photo-7659862.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="easy-text">Meet by secure video from home</div>
+          </div>
+
+          <div class="easy-card">
+            <div class="easy-img">
+              <img
+                alt="Personalized plan"
+                src="https://images.pexels.com/photos/31406894/pexels-photo-31406894.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="easy-text">Start a personalized monthly plan</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section id="programs" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="h2">Programs</h2>
+          <p class="p-muted">Out-of-pocket programs with clear monthly options.</p>
+        </div>
+
+        <div class="programs">
+          <article class="program">
+            <div class="program-top">
+              <div>
+                <div class="program-title">Weight Management</div>
+                <div class="program-price">$499–$599 <span>/ month</span></div>
+              </div>
+              <div class="program-pill">Most Popular</div>
+            </div>
+            <ul class="program-list">
+              <li>Monthly check-ins + ongoing support</li>
+              <li>Video visits from home</li>
+              <li>Monthly plan management</li>
+            </ul>
+          </article>
+
+          <article class="program">
+            <div class="program-top">
+              <div>
+                <div class="program-title">Women’s HRT</div>
+                <div class="program-price">$99–$149 <span>/ month</span></div>
+              </div>
+              <div class="program-pill">Support</div>
+            </div>
+            <ul class="program-list">
+              <li>Symptom-focused care</li>
+              <li>Simple monthly plan</li>
+              <li>Ongoing support</li>
+            </ul>
+          </article>
+
+          <article class="program">
+            <div class="program-top">
+              <div>
+                <div class="program-title">Testosterone</div>
+                <div class="program-price">$149–$199 <span>/ month</span></div>
+              </div>
+              <div class="program-pill">Ongoing</div>
+            </div>
+            <ul class="program-list">
+              <li>Ongoing monthly management</li>
+              <li>Adjustments as needed</li>
+              <li>Ongoing support</li>
+            </ul>
+          </article>
+
+          <article class="program">
+            <div class="program-top">
+              <div>
+                <div class="program-title">Erectile Dysfunction</div>
+                <div class="program-price">$49–$99 <span>/ month</span></div>
+              </div>
+              <div class="program-pill">Fast</div>
+            </div>
+            <ul class="program-list">
+              <li>Quick intake</li>
+              <li>Simple monthly plan</li>
+              <li>Ongoing support</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="note">
+          Pricing shown is a typical range. Final plan depends on your evaluation and program selection.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WEIGHT LOSS OFFERINGS (Henry-style) ===== -->
+    <section class="section" id="weight-loss">
+      <div class="wrap">
+
+        <div class="weight-hero">
+          <h2>Your Path to Healthy Weight Starts Here</h2>
+          <p>Provider-supervised medicine with 1-on-1 regular video telehealth visits and ongoing support.</p>
+
+          <div class="weight-badges">
+            <div class="w-badge">Provider Supervised Medicine</div>
+            <div class="w-badge">1-On-1 Regular Video Telehealth Visits</div>
+            <div class="w-badge">Highly Rated by our Patients</div>
+          </div>
+        </div>
+
+        <div class="weight-grid">
+
+          <div class="weight-card">
+            <img src="https://images.pexels.com/photos/5723889/pexels-photo-5723889.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Vial of injectable semaglutide" loading="lazy" referrerpolicy="no-referrer">
+            <h3>Compounded Injectable Semaglutide</h3>
+            <div class="weight-sub">Weekly Injection</div>
+            <ul><li>Vial of injectable semaglutide</li></ul>
+          </div>
+
+          <div class="weight-card">
+            <img src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Bottle with oral semaglutide tablets" loading="lazy" referrerpolicy="no-referrer">
+            <h3>Compounded Oral Semaglutide</h3>
+            <div class="weight-sub">Dissolvable Tablets or Drops</div>
+            <ul><li>Bottle with oral semaglutide tablets / drops</li></ul>
+          </div>
+
+          <div class="weight-card">
+            <img src="https://images.pexels.com/photos/5723886/pexels-photo-5723886.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Vial of injectable microdose semaglutide" loading="lazy" referrerpolicy="no-referrer">
+            <h3>Compounded Microdose Semaglutide</h3>
+            <div class="weight-sub">Injection</div>
+            <ul><li>Vial of injectable semaglutide</li></ul>
+          </div>
+
+          <div class="weight-card">
+            <img src="https://images.pexels.com/photos/3683076/pexels-photo-3683076.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Bottle with dissolving tablets" loading="lazy" referrerpolicy="no-referrer">
+            <h3>Compounded Microdose Oral Semaglutide</h3>
+            <div class="weight-sub">Dissolving Tablets</div>
+            <ul><li>Bottle with oral semaglutide tablets</li></ul>
+          </div>
+
+          <div class="weight-card">
+            <img src="https://images.pexels.com/photos/3683078/pexels-photo-3683078.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Bottle with oral tirzepatide tablets" loading="lazy" referrerpolicy="no-referrer">
+            <h3>Compounded Oral Tirzepatide</h3>
+            <div class="weight-sub">Dissolvable Tablets</div>
+            <ul><li>Bottle with oral tirzepatide tablets</li></ul>
+          </div>
+
+          <div class="weight-card">
+            <img src="https://images.pexels.com/photos/5723893/pexels-photo-5723893.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Vial of injectable liraglutide" loading="lazy" referrerpolicy="no-referrer">
+            <h3>Compounded Injectable Liraglutide</h3>
+            <div class="weight-sub">Daily Injection</div>
+            <ul><li>Vial of injectable liraglutide</li></ul>
+          </div>
+
+          <div class="weight-card">
+            <img src="https://images.pexels.com/photos/3683090/pexels-photo-3683090.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Bottle with oral phentermine tablets" loading="lazy" referrerpolicy="no-referrer">
+            <h3>Compounded Oral Phentermine</h3>
+            <div class="weight-sub">Daily Tablets</div>
+            <ul><li>Oral phentermine tablets</li></ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="how">
+      <div class="wrap">
+        <h2 class="h2">How it works</h2>
+        <p class="p-muted">Get started in minutes.</p>
+
+        <div class="how-grid">
+          <div class="how-card">
+            <div class="how-num">1</div>
+            <div class="how-body">
+              <div class="how-title">Medical Forms</div>
+              <div class="how-sub">Share your details — takes about 5 minutes.</div>
+            </div>
+          </div>
+
+          <div class="how-card">
+            <div class="how-num">2</div>
+            <div class="how-body">
+              <div class="how-title">Video Visit</div>
+              <div class="how-sub">Meet by video to confirm your plan.</div>
+            </div>
+          </div>
+
+          <div class="how-card">
+            <div class="how-num">3</div>
+            <div class="how-body">
+              <div class="how-title">Monthly Support</div>
+              <div class="how-sub">Ongoing check-ins and plan management.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="h2">Get Started</h2>
+          <p class="p-muted">Complete intake and book your visit.</p>
+        </div>
+
+        <div class="booking-grid">
+          <div class="card">
+            <h3 class="h3">Quick intake (demo)</h3>
+            <form id="intakeForm" class="form">
+              <label>Full name
+                <input name="name" required placeholder="First + Last">
+              </label>
+
+              <label>Email
+                <input name="email" required type="email" placeholder="you@email.com">
+              </label>
+
+              <label>State
+                <select name="state" required>
+                  <option value="" selected disabled>Select</option>
+                  <option>NM</option><option>KS</option><option>IA</option>
+                  <option>AZ</option><option>CO</option><option>NV</option><option>TX</option>
+                </select>
+              </label>
+
+              <label>Program
+                <select name="program" required>
+                  <option value="" selected disabled>Select</option>
+                  <option>Weight Management</option>
+                  <option>Women’s HRT</option>
+                  <option>Testosterone</option>
+                  <option>Erectile Dysfunction</option>
+                </select>
+              </label>
+
+              <label>Notes (optional)
+                <textarea name="notes" rows="3" placeholder="Goals or questions…"></textarea>
+              </label>
+
+              <div class="actions">
+                <button class="btn btn-primary" type="submit">Save intake</button>
+                <button class="btn btn-ghost" type="button" id="goToBooking">Open booking</button>
+              </div>
+
+              <div class="fineprint">
+                Demo site. Not medical advice. For emergencies call local emergency services.
+              </div>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3 class="h3">Booking</h3>
+            <p class="p-muted">Open your scheduling page.</p>
+            <a class="btn btn-primary" id="bookingLink" href="#" target="_blank" rel="noopener">Open booking calendar</a>
+
+            <div class="divider"></div>
+
+            <h3 class="h3">Video visit (demo)</h3>
+            <p class="p-muted">Preview the video experience.</p>
+            <a class="btn btn-ghost" href="#visit">Open video demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="visit" class="video-section">
+      <div class="wrap">
+        <h2 class="h2">Video Visit</h2>
+        <p class="p-muted">Enter a room name and join.</p>
+
+        <div class="video-controls">
+          <input id="roomName" class="input" placeholder="BV-DEMO-001">
+          <button class="btn btn-primary" id="startCall">Start / Join</button>
+          <button class="btn btn-ghost" id="endCall">End</button>
+        </div>
+
+        <div id="jitsiWrap" class="video">
+          <div class="video-placeholder">Enter a room name and click <b>Start / Join</b>.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div class="footer-left">
+          <div class="footer-mark">BV</div>
+          <div>
+            <div class="footer-title">BioTech Ventures</div>
+            <div class="footer-sub">Telehealth demo • Out-of-pocket programs</div>
+          </div>
+        </div>
+        <div class="footer-right">© <span id="year"></span></div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="https://meet.jit.si/external_api.js"></script>
+  <script src="./app.js?v=8"></script>
+</body>
+</html>
