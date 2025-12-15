@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BioTech Ventures | Telehealth</title>
   <meta name="description" content="Cash-pay telehealth. Book online. Video visits from home." />
-
   <style>
     :root{
       --bg:#ffffff;
@@ -33,18 +32,8 @@
     .container{max-width:1120px;margin:0 auto;padding:0 18px}
 
     /* Top bar */
-    .topbar{
-      background:#0b1220;
-      color:#fff;
-      font-size:13px;
-    }
-    .topbar-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      padding:10px 0;
-    }
+    .topbar{background:#0b1220;color:#fff;font-size:13px}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0}
     .topbar-left{display:flex;align-items:center;gap:10px;opacity:.95}
     .dot{width:8px;height:8px;border-radius:999px;background:var(--teal)}
     .topbar-cta{color:#fff;text-decoration:underline;font-weight:900}
@@ -56,15 +45,11 @@
       backdrop-filter: blur(10px);
       border-bottom:1px solid var(--line);
     }
-    .header-inner{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:14px 0;
-    }
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px}
     .logo{
       width:42px;height:42px;border-radius:14px;
-      display:grid;place-items:center;
-      font-weight:1000;
+      display:grid;place-items:center;font-weight:1000;
       background:linear-gradient(135deg, rgba(27,108,255,.16), rgba(0,179,164,.14));
       border:1px solid rgba(27,108,255,.18);
     }
@@ -90,46 +75,35 @@
 
     /* Hero */
     .hero{padding:34px 0 20px;border-bottom:1px solid var(--line)}
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:26px;
-      align-items:center;
-    }
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center}
     .kicker{font-weight:1000;color:var(--muted);letter-spacing:.02em;margin-bottom:10px}
     h1{margin:0;font-size:52px;line-height:1.02}
     .lead{margin:14px 0 0;color:var(--muted);font-size:18px;line-height:1.7;max-width:560px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
+    .trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .trust-item{
+      flex:1;min-width:170px;border:1px solid var(--line);
+      border-radius:16px;padding:12px;background:#fff;
+      box-shadow:0 10px 24px rgba(16,24,40,.05);
+    }
+    .trust-title{font-weight:1000}
+    .trust-sub{margin-top:4px;color:var(--muted);font-size:12px;line-height:1.5}
+
     .hero-card{
       border-radius:24px;overflow:hidden;border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      background:#fff;
+      box-shadow:var(--shadow);background:#fff;
     }
-    /* CRITICAL: image sizing so it never gets huge */
-    .hero-img{
+    /* locked size so it never goes huge */
+    .hero-visual{
       width:100%;
       height:420px;
-      object-fit:cover;
+      display:block;
       background:linear-gradient(135deg, rgba(27,108,255,.10), rgba(0,179,164,.10));
     }
     .hero-bottom{padding:14px 14px 16px}
     .hero-bottom-title{font-weight:1000}
     .hero-bottom-sub{margin-top:4px;color:var(--muted);font-size:12px}
-
-    .trust{
-      display:flex;gap:10px;flex-wrap:wrap;margin-top:18px
-    }
-    .trust-item{
-      flex:1;min-width:170px;
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:12px;
-      background:#fff;
-      box-shadow:0 10px 24px rgba(16,24,40,.05);
-    }
-    .trust-title{font-weight:1000}
-    .trust-sub{margin-top:4px;color:var(--muted);font-size:12px;line-height:1.5}
 
     /* Sections */
     .section{padding:34px 0}
@@ -154,33 +128,21 @@
       padding:8px 12px;border-radius:999px;font-weight:1000;font-size:12px;
       white-space:nowrap;
     }
-    .badge-soft{
-      background:rgba(0,179,164,.10);
-      border:1px solid rgba(0,179,164,.20);
-    }
+    .badge-soft{background:rgba(0,179,164,.10);border:1px solid rgba(0,179,164,.20)}
     .list{margin:14px 0 0;padding-left:18px;color:var(--muted);line-height:1.7}
 
-    /* Featured image under Weight Loss (controlled size) */
-    .feature-img{
-      margin-top:14px;
-      border:1px solid var(--line);
-      border-radius:16px;
-      overflow:hidden;
-      background:#fff;
-      box-shadow:0 10px 24px rgba(16,24,40,.06);
+    /* Weight-loss visual (shot/vial) — controlled */
+    .feature{
+      margin-top:14px;border:1px solid var(--line);border-radius:16px;
+      overflow:hidden;background:#fff;box-shadow:0 10px 24px rgba(16,24,40,.06);
     }
-    .feature-img img{
+    .feature-visual{
       width:100%;
-      height:220px;     /* locks it */
-      object-fit:cover; /* looks clean */
-      background:linear-gradient(135deg, rgba(27,108,255,.10), rgba(0,179,164,.10));
+      height:220px; /* locked */
+      display:block;
+      background:linear-gradient(135deg, rgba(27,108,255,.08), rgba(0,179,164,.08));
     }
-    .feature-img .cap{
-      padding:12px 14px;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.5;
-    }
+    .feature-cap{padding:12px 14px;color:var(--muted);font-size:12px;line-height:1.5}
 
     /* Steps */
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -222,35 +184,25 @@
 
     /* Video */
     .video-controls{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-    .input{
-      flex:1;min-width:240px;padding:12px 12px;border-radius:14px;border:1px solid var(--line);
-    }
+    .input{flex:1;min-width:240px;padding:12px 12px;border-radius:14px;border:1px solid var(--line)}
     .video{
-      margin-top:14px;
-      min-height:560px;
-      border-radius:18px;
-      border:1px solid var(--line);
-      overflow:hidden;
-      background:#fff;
-      box-shadow:0 10px 24px rgba(16,24,40,.06);
+      margin-top:14px;min-height:560px;border-radius:18px;border:1px solid var(--line);
+      overflow:hidden;background:#fff;box-shadow:0 10px 24px rgba(16,24,40,.06);
     }
     .video-placeholder{padding:16px;color:var(--muted)}
 
-    footer{
-      padding:22px 0;border-top:1px solid var(--line);background:#fff
-    }
+    footer{padding:22px 0;border-top:1px solid var(--line);background:#fff}
     .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
     .foot-right{color:var(--muted);font-weight:900}
 
-    /* Responsive */
     @media (max-width: 980px){
       .hero-grid{grid-template-columns:1fr}
       h1{font-size:42px}
-      .hero-img{height:320px}
+      .hero-visual{height:320px}
       .cards{grid-template-columns:1fr}
       .steps{grid-template-columns:1fr}
       .split{grid-template-columns:1fr}
-      .feature-img img{height:200px}
+      .feature-visual{height:200px}
     }
   </style>
 </head>
@@ -307,17 +259,48 @@
       </div>
 
       <div class="hero-card">
-        <img
-          class="hero-img"
-          alt="Telehealth visit"
-          referrerpolicy="no-referrer"
-          src="https://images.pexels.com/photos/7195123/pexels-photo-7195123.jpeg?auto=compress&cs=tinysrgb&w=1600"
-          onerror="this.style.display='none'; this.parentElement.querySelector('.hero-fallback').style.display='block';"
-        />
-        <div class="hero-fallback" style="display:none;padding:28px;background:linear-gradient(135deg, rgba(27,108,255,.12), rgba(0,179,164,.10));">
-          <div style="font-weight:1000;font-size:18px;">Video visits from home</div>
-          <div style="color:var(--muted);margin-top:6px;">Images blocked on this network — site still works.</div>
-        </div>
+        <!-- Always-load hero illustration (no external images) -->
+        <svg class="hero-visual" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Telehealth illustration">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1b6cff" stop-opacity="0.20"/>
+              <stop offset="1" stop-color="#00b3a4" stop-opacity="0.18"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#1b6cff"/>
+              <stop offset="1" stop-color="#2f8cff"/>
+            </linearGradient>
+          </defs>
+
+          <rect x="0" y="0" width="900" height="520" fill="url(#g1)"/>
+          <circle cx="120" cy="120" r="46" fill="#00b3a4" fill-opacity=".12"/>
+          <circle cx="780" cy="90" r="60" fill="#1b6cff" fill-opacity=".10"/>
+          <circle cx="760" cy="420" r="70" fill="#00b3a4" fill-opacity=".10"/>
+
+          <!-- laptop -->
+          <rect x="210" y="150" rx="22" ry="22" width="480" height="270" fill="#ffffff" stroke="#e7eef7" stroke-width="4"/>
+          <rect x="245" y="185" rx="16" ry="16" width="410" height="200" fill="#f6f9fe" stroke="#e7eef7" stroke-width="3"/>
+
+          <!-- video frame -->
+          <rect x="275" y="210" rx="14" ry="14" width="220" height="150" fill="#ffffff" stroke="#e7eef7" stroke-width="3"/>
+          <circle cx="340" cy="270" r="26" fill="#1b6cff" fill-opacity=".14"/>
+          <rect x="380" y="248" rx="10" ry="10" width="90" height="16" fill="#0b1220" fill-opacity=".12"/>
+          <rect x="380" y="276" rx="10" ry="10" width="120" height="16" fill="#0b1220" fill-opacity=".10"/>
+          <rect x="380" y="304" rx="10" ry="10" width="78" height="16" fill="#0b1220" fill-opacity=".08"/>
+
+          <!-- side panel -->
+          <rect x="520" y="210" rx="14" ry="14" width="120" height="150" fill="#ffffff" stroke="#e7eef7" stroke-width="3"/>
+          <rect x="540" y="235" rx="10" ry="10" width="80" height="18" fill="#1b6cff" fill-opacity=".16"/>
+          <rect x="540" y="266" rx="10" ry="10" width="80" height="12" fill="#0b1220" fill-opacity=".10"/>
+          <rect x="540" y="290" rx="10" ry="10" width="65" height="12" fill="#0b1220" fill-opacity=".10"/>
+          <rect x="540" y="314" rx="10" ry="10" width="72" height="12" fill="#0b1220" fill-opacity=".10"/>
+
+          <!-- button -->
+          <rect x="312" y="392" rx="18" ry="18" width="276" height="44" fill="url(#g2)"/>
+          <circle cx="450" cy="414" r="10" fill="#ffffff" fill-opacity=".9"/>
+          <polygon points="446,408 446,420 458,414" fill="#ffffff"/>
+        </svg>
+
         <div class="hero-bottom">
           <div class="hero-bottom-title">Video visits from home</div>
           <div class="hero-bottom-sub">Book online in minutes</div>
@@ -334,6 +317,7 @@
       </div>
 
       <div class="cards">
+        <!-- Weight Loss -->
         <article class="card">
           <div class="card-top">
             <div>
@@ -348,20 +332,54 @@
             <li>Refill workflow support</li>
           </ul>
 
-          <!-- Weight Loss image (professional + controlled sizing) -->
-          <div class="feature-img">
-            <img
-              alt="Weight loss program"
-              referrerpolicy="no-referrer"
-              src="https://images.pexels.com/photos/6942014/pexels-photo-6942014.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='block';"
-            />
-          </div>
-          <div class="cap" style="display:none;margin-top:10px;color:var(--muted);font-size:12px;">
-            (Image blocked on this network — everything still works.)
+          <!-- Weight-loss shot/vial visual (always loads) -->
+          <div class="feature">
+            <svg class="feature-visual" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weight-loss injection pen and vial illustration">
+              <defs>
+                <linearGradient id="wlbg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1b6cff" stop-opacity="0.14"/>
+                  <stop offset="1" stop-color="#00b3a4" stop-opacity="0.12"/>
+                </linearGradient>
+                <linearGradient id="pen" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#2f8cff"/>
+                  <stop offset="1" stop-color="#1b6cff"/>
+                </linearGradient>
+              </defs>
+
+              <rect x="0" y="0" width="1000" height="420" fill="url(#wlbg)"/>
+              <circle cx="140" cy="120" r="70" fill="#00b3a4" fill-opacity=".10"/>
+              <circle cx="820" cy="90" r="60" fill="#1b6cff" fill-opacity=".10"/>
+
+              <!-- vial -->
+              <rect x="130" y="140" width="220" height="220" rx="26" fill="#ffffff" stroke="#e7eef7" stroke-width="6"/>
+              <rect x="160" y="170" width="160" height="70" rx="16" fill="#f6f9fe" stroke="#e7eef7" stroke-width="4"/>
+              <rect x="160" y="255" width="160" height="80" rx="16" fill="#ffffff" stroke="#e7eef7" stroke-width="4"/>
+              <rect x="190" y="186" width="100" height="14" rx="7" fill="#0b1220" fill-opacity=".10"/>
+              <rect x="190" y="212" width="80" height="14" rx="7" fill="#0b1220" fill-opacity=".08"/>
+              <rect x="200" y="280" width="120" height="18" rx="9" fill="#1b6cff" fill-opacity=".14"/>
+              <rect x="200" y="310" width="90" height="14" rx="7" fill="#0b1220" fill-opacity=".08"/>
+
+              <!-- vial cap -->
+              <rect x="165" y="108" width="150" height="46" rx="16" fill="#ffffff" stroke="#e7eef7" stroke-width="6"/>
+
+              <!-- injection pen -->
+              <rect x="430" y="170" width="420" height="70" rx="35" fill="url(#pen)"/>
+              <rect x="850" y="182" width="70" height="46" rx="18" fill="#ffffff" fill-opacity=".85"/>
+              <rect x="390" y="182" width="50" height="46" rx="18" fill="#ffffff" fill-opacity=".85"/>
+
+              <!-- pen window -->
+              <rect x="560" y="188" width="120" height="34" rx="12" fill="#ffffff" fill-opacity=".32"/>
+              <rect x="575" y="198" width="90" height="14" rx="7" fill="#0b1220" fill-opacity=".18"/>
+
+              <!-- needle tip -->
+              <rect x="360" y="198" width="30" height="14" rx="7" fill="#e7eef7"/>
+              <rect x="330" y="203" width="34" height="4" rx="2" fill="#0b1220" fill-opacity=".20"/>
+            </svg>
+            <div class="feature-cap">Illustration shown for demo purposes (shot/vial style).</div>
           </div>
         </article>
 
+        <!-- Women’s HRT -->
         <article class="card">
           <div class="card-top">
             <div>
@@ -377,6 +395,7 @@
           </ul>
         </article>
 
+        <!-- Men’s TRT -->
         <article class="card">
           <div class="card-top">
             <div>
@@ -392,6 +411,7 @@
           </ul>
         </article>
 
+        <!-- ED -->
         <article class="card">
           <div class="card-top">
             <div>
@@ -408,7 +428,7 @@
         </article>
       </div>
 
-      <div style="margin-top:14px;border:1px solid var(--line);border-radius:14px;padding:12px 14px;color:var(--muted);background:#fff;">
+      <div class="note" style="margin-top:14px;border:1px solid var(--line);border-radius:14px;padding:12px 14px;color:var(--muted);background:#fff;">
         Pricing shown is a typical range. Final plan is confirmed after a short online evaluation.
       </div>
     </div>
@@ -600,4 +620,3 @@
   </script>
 </body>
 </html>
-
