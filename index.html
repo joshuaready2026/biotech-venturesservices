@@ -2,14 +2,260 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BioTech Ventures | Telehealth</title>
   <meta name="description" content="Cash-pay telehealth. Book online. Video visits from home." />
-  <link rel="stylesheet" href="./styles.css?v=1" />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0b1220;
+      --muted:#5b6b86;
+      --line:#e7eef7;
+      --soft:#f6f9fe;
+
+      --brand:#1b6cff;   /* medical blue */
+      --teal:#00b3a4;    /* accent */
+      --shadow: 0 14px 40px rgba(16,24,40,.08);
+      --r:18px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:var(--bg);
+      color:var(--ink);
+    }
+    a{color:inherit}
+    img{display:block;max-width:100%}
+
+    .container{max-width:1120px;margin:0 auto;padding:0 18px}
+
+    /* Top bar */
+    .topbar{
+      background:#0b1220;
+      color:#fff;
+      font-size:13px;
+    }
+    .topbar-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 0;
+    }
+    .topbar-left{display:flex;align-items:center;gap:10px;opacity:.95}
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--teal)}
+    .topbar-cta{color:#fff;text-decoration:underline;font-weight:900}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(255,255,255,.88);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:42px;height:42px;border-radius:14px;
+      display:grid;place-items:center;
+      font-weight:1000;
+      background:linear-gradient(135deg, rgba(27,108,255,.16), rgba(0,179,164,.14));
+      border:1px solid rgba(27,108,255,.18);
+    }
+    .brand-name{font-weight:1000}
+    .brand-sub{font-size:12px;color:var(--muted);margin-top:2px}
+
+    /* Buttons */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:999px;
+      font-weight:900;border:1px solid var(--line);
+      background:#fff;cursor:pointer;text-decoration:none;
+      transition:transform .12s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{
+      background:linear-gradient(90deg,var(--brand),#2f8cff);
+      border-color:rgba(27,108,255,.25);
+      color:#fff;
+    }
+    .btn-ghost{background:#fff;color:var(--ink)}
+    .btn-full{width:100%}
+
+    /* Hero */
+    .hero{padding:34px 0 20px;border-bottom:1px solid var(--line)}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:26px;
+      align-items:center;
+    }
+    .kicker{font-weight:1000;color:var(--muted);letter-spacing:.02em;margin-bottom:10px}
+    h1{margin:0;font-size:52px;line-height:1.02}
+    .lead{margin:14px 0 0;color:var(--muted);font-size:18px;line-height:1.7;max-width:560px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+
+    .hero-card{
+      border-radius:24px;overflow:hidden;border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+    /* CRITICAL: image sizing so it never gets huge */
+    .hero-img{
+      width:100%;
+      height:420px;
+      object-fit:cover;
+      background:linear-gradient(135deg, rgba(27,108,255,.10), rgba(0,179,164,.10));
+    }
+    .hero-bottom{padding:14px 14px 16px}
+    .hero-bottom-title{font-weight:1000}
+    .hero-bottom-sub{margin-top:4px;color:var(--muted);font-size:12px}
+
+    .trust{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:18px
+    }
+    .trust-item{
+      flex:1;min-width:170px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:12px;
+      background:#fff;
+      box-shadow:0 10px 24px rgba(16,24,40,.05);
+    }
+    .trust-title{font-weight:1000}
+    .trust-sub{margin-top:4px;color:var(--muted);font-size:12px;line-height:1.5}
+
+    /* Sections */
+    .section{padding:34px 0}
+    .soft{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px}
+    .section-head h2{margin:0;font-size:34px}
+    .section-head p{margin:0;color:var(--muted);line-height:1.6;max-width:520px}
+
+    /* Program cards */
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{
+      background:#fff;border:1px solid var(--line);border-radius:18px;
+      padding:18px;box-shadow:0 10px 24px rgba(16,24,40,.06);
+    }
+    .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .card-title{font-weight:1000;font-size:18px}
+    .card-price{margin-top:8px;font-weight:1000;font-size:22px}
+    .card-price span{font-size:13px;color:var(--muted);font-weight:900}
+    .badge{
+      background:rgba(27,108,255,.10);
+      border:1px solid rgba(27,108,255,.18);
+      padding:8px 12px;border-radius:999px;font-weight:1000;font-size:12px;
+      white-space:nowrap;
+    }
+    .badge-soft{
+      background:rgba(0,179,164,.10);
+      border:1px solid rgba(0,179,164,.20);
+    }
+    .list{margin:14px 0 0;padding-left:18px;color:var(--muted);line-height:1.7}
+
+    /* Featured image under Weight Loss (controlled size) */
+    .feature-img{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 10px 24px rgba(16,24,40,.06);
+    }
+    .feature-img img{
+      width:100%;
+      height:220px;     /* locks it */
+      object-fit:cover; /* looks clean */
+      background:linear-gradient(135deg, rgba(27,108,255,.10), rgba(0,179,164,.10));
+    }
+    .feature-img .cap{
+      padding:12px 14px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    /* Steps */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .step{
+      background:#fff;border:1px solid var(--line);border-radius:18px;
+      padding:18px;box-shadow:0 10px 24px rgba(16,24,40,.06);
+      display:flex;gap:14px;align-items:flex-start;
+    }
+    .step-num{
+      width:44px;height:44px;border-radius:14px;
+      display:grid;place-items:center;font-weight:1000;
+      background:linear-gradient(135deg, rgba(27,108,255,.14), rgba(0,179,164,.14));
+      border:1px solid rgba(27,108,255,.18);
+    }
+    .step-title{font-weight:1000}
+    .step-sub{margin-top:6px;color:var(--muted);line-height:1.6}
+
+    /* Start section */
+    .split{display:grid;grid-template-columns:1.05fr .95fr;gap:16px}
+    .panel{
+      background:#fff;border:1px solid var(--line);border-radius:18px;
+      padding:18px;box-shadow:0 10px 24px rgba(16,24,40,.06);
+    }
+    h3{margin:0 0 10px;font-size:18px}
+    .muted{color:var(--muted);line-height:1.6;margin:0 0 12px}
+
+    .form label{display:block;font-weight:900;font-size:13px;margin:10px 0}
+    input,select,textarea{
+      width:100%;margin-top:6px;padding:12px 12px;border-radius:14px;
+      border:1px solid var(--line);outline:none;background:#fff;
+    }
+    input:focus,select:focus,textarea:focus{
+      border-color:rgba(27,108,255,.5);
+      box-shadow:0 0 0 4px rgba(27,108,255,.10);
+    }
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .fineprint{margin-top:12px;color:var(--muted);font-size:12px;line-height:1.5}
+    .divider{height:1px;background:var(--line);margin:16px 0}
+
+    /* Video */
+    .video-controls{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .input{
+      flex:1;min-width:240px;padding:12px 12px;border-radius:14px;border:1px solid var(--line);
+    }
+    .video{
+      margin-top:14px;
+      min-height:560px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 10px 24px rgba(16,24,40,.06);
+    }
+    .video-placeholder{padding:16px;color:var(--muted)}
+
+    footer{
+      padding:22px 0;border-top:1px solid var(--line);background:#fff
+    }
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .foot-right{color:var(--muted);font-weight:900}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      h1{font-size:42px}
+      .hero-img{height:320px}
+      .cards{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+      .feature-img img{height:200px}
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top bar -->
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="topbar-left">
@@ -20,12 +266,11 @@
     </div>
   </div>
 
-  <!-- Minimal header -->
-  <header class="header">
+  <header>
     <div class="container header-inner">
       <div class="brand">
         <div class="logo">BV</div>
-        <div class="brand-text">
+        <div>
           <div class="brand-name">BioTech Ventures</div>
           <div class="brand-sub">Telehealth + E-Pharmacy</div>
         </div>
@@ -34,15 +279,12 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="container hero-grid">
-      <div class="hero-copy">
+      <div>
         <div class="kicker">Simple care from home</div>
         <h1>Your health, simplified.</h1>
-        <p class="lead">
-          Clear monthly programs, quick online booking, and secure video visits — all out-of-pocket.
-        </p>
+        <p class="lead">Clear monthly programs, quick online booking, and secure video visits — all out-of-pocket.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#programs">View programs</a>
           <a class="btn btn-ghost" href="#start">Book a visit</a>
@@ -64,29 +306,31 @@
         </div>
       </div>
 
-      <div class="hero-media">
-        <div class="hero-card">
-          <img
-            class="hero-img"
-            alt="Telehealth visit"
-            referrerpolicy="no-referrer"
-            src="https://images.pexels.com/photos/7195123/pexels-photo-7195123.jpeg?auto=compress&cs=tinysrgb&w=1600"
-          />
-          <div class="hero-card-bottom">
-            <div class="hero-card-title">Video visits from home</div>
-            <div class="hero-card-sub">Book online in minutes</div>
-          </div>
+      <div class="hero-card">
+        <img
+          class="hero-img"
+          alt="Telehealth visit"
+          referrerpolicy="no-referrer"
+          src="https://images.pexels.com/photos/7195123/pexels-photo-7195123.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          onerror="this.style.display='none'; this.parentElement.querySelector('.hero-fallback').style.display='block';"
+        />
+        <div class="hero-fallback" style="display:none;padding:28px;background:linear-gradient(135deg, rgba(27,108,255,.12), rgba(0,179,164,.10));">
+          <div style="font-weight:1000;font-size:18px;">Video visits from home</div>
+          <div style="color:var(--muted);margin-top:6px;">Images blocked on this network — site still works.</div>
+        </div>
+        <div class="hero-bottom">
+          <div class="hero-bottom-title">Video visits from home</div>
+          <div class="hero-bottom-sub">Book online in minutes</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Programs -->
   <section id="programs" class="section">
     <div class="container">
       <div class="section-head">
         <h2>Programs</h2>
-        <p>Clear options with simple monthly pricing.</p>
+        <p>Simple monthly programs with clear pricing.</p>
       </div>
 
       <div class="cards">
@@ -103,6 +347,19 @@
             <li>Video visit check-ins</li>
             <li>Refill workflow support</li>
           </ul>
+
+          <!-- Weight Loss image (professional + controlled sizing) -->
+          <div class="feature-img">
+            <img
+              alt="Weight loss program"
+              referrerpolicy="no-referrer"
+              src="https://images.pexels.com/photos/6942014/pexels-photo-6942014.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='block';"
+            />
+          </div>
+          <div class="cap" style="display:none;margin-top:10px;color:var(--muted);font-size:12px;">
+            (Image blocked on this network — everything still works.)
+          </div>
         </article>
 
         <article class="card">
@@ -151,13 +408,12 @@
         </article>
       </div>
 
-      <div class="note">
+      <div style="margin-top:14px;border:1px solid var(--line);border-radius:14px;padding:12px 14px;color:var(--muted);background:#fff;">
         Pricing shown is a typical range. Final plan is confirmed after a short online evaluation.
       </div>
     </div>
   </section>
 
-  <!-- How it works -->
   <section class="section soft" id="how">
     <div class="container">
       <div class="section-head">
@@ -173,7 +429,6 @@
             <div class="step-sub">Answer a few quick questions.</div>
           </div>
         </div>
-
         <div class="step">
           <div class="step-num">2</div>
           <div>
@@ -181,7 +436,6 @@
             <div class="step-sub">Choose a time that works for you.</div>
           </div>
         </div>
-
         <div class="step">
           <div class="step-num">3</div>
           <div>
@@ -190,34 +444,9 @@
           </div>
         </div>
       </div>
-
-      <div class="media-row">
-        <div class="media">
-          <img
-            alt="Online intake"
-            referrerpolicy="no-referrer"
-            src="https://images.pexels.com/photos/7446988/pexels-photo-7446988.jpeg?auto=compress&cs=tinysrgb&w=1400"
-          />
-        </div>
-        <div class="media">
-          <img
-            alt="Telehealth call"
-            referrerpolicy="no-referrer"
-            src="https://images.pexels.com/photos/7659862/pexels-photo-7659862.jpeg?auto=compress&cs=tinysrgb&w=1400"
-          />
-        </div>
-        <div class="media">
-          <img
-            alt="Care plan"
-            referrerpolicy="no-referrer"
-            src="https://images.pexels.com/photos/31406894/pexels-photo-31406894.jpeg?auto=compress&cs=tinysrgb&w=1400"
-          />
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- Start / Booking -->
   <section id="start" class="section">
     <div class="container">
       <div class="section-head">
@@ -274,20 +503,19 @@
         <div class="panel">
           <h3>Booking + video</h3>
           <p class="muted">Use your scheduling link (Calendly recommended).</p>
-          <a class="btn btn-primary full" id="bookingLink" href="#" target="_blank" rel="noopener">
+          <a class="btn btn-primary btn-full" id="bookingLink" href="#" target="_blank" rel="noopener">
             Open booking calendar
           </a>
 
           <div class="divider"></div>
 
           <p class="muted">Or preview the video visit flow:</p>
-          <a class="btn btn-ghost full" href="#visit">Open video demo</a>
+          <a class="btn btn-ghost btn-full" href="#visit">Open video demo</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Video visit -->
   <section id="visit" class="section soft">
     <div class="container">
       <div class="section-head">
@@ -307,10 +535,10 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer>
     <div class="container footer-inner">
-      <div class="foot-left">
-        <div class="logo logo-sm">BV</div>
+      <div class="brand" style="gap:10px">
+        <div class="logo" style="width:34px;height:34px;border-radius:12px">BV</div>
         <div>
           <div class="brand-name">BioTech Ventures</div>
           <div class="brand-sub">Telehealth demo</div>
@@ -321,7 +549,55 @@
   </footer>
 
   <script src="https://meet.jit.si/external_api.js"></script>
-  <script src="./app.js?v=1"></script>
+  <script>
+    // ====== CONFIG ======
+    const BOOKING_URL = "https://calendly.com/YOUR-CALENDLY/15min"; // <-- replace with your real link
+
+    // footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // booking links
+    document.getElementById("bookingLink").href = BOOKING_URL;
+    document.getElementById("goToBooking").addEventListener("click", () => {
+      window.open(BOOKING_URL, "_blank", "noopener");
+    });
+
+    // intake demo save
+    document.getElementById("intakeForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      localStorage.setItem("bv_intake_demo", JSON.stringify(data));
+      alert("Saved (demo). Now click Open booking.");
+    });
+
+    // video (Jitsi)
+    let api = null;
+    function safeRoomName(raw) {
+      return (raw || "").trim().replace(/[^a-zA-Z0-9-_]/g, "-").slice(0, 60) || "BV-DEMO-001";
+    }
+    document.getElementById("startCall").addEventListener("click", () => {
+      const room = safeRoomName(document.getElementById("roomName").value);
+      const parentNode = document.getElementById("jitsiWrap");
+
+      parentNode.innerHTML = "";
+      if (api) { try { api.dispose(); } catch(_) {} api = null; }
+
+      api = new JitsiMeetExternalAPI("meet.jit.si", {
+        roomName: room,
+        parentNode,
+        width: "100%",
+        height: 560,
+        configOverwrite: { prejoinPageEnabled: true },
+        interfaceConfigOverwrite: { DISABLE_JOIN_LEAVE_NOTIFICATIONS: true }
+      });
+    });
+
+    document.getElementById("endCall").addEventListener("click", () => {
+      const parentNode = document.getElementById("jitsiWrap");
+      if (api) { try { api.dispose(); } catch(_) {} api = null; }
+      parentNode.innerHTML = '<div class="video-placeholder">Call ended.</div>';
+    });
+  </script>
 </body>
 </html>
 
